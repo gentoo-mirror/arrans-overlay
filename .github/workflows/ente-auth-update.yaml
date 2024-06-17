@@ -23,7 +23,7 @@ jobs:
       - name: Install required tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget jq
+          sudo apt-get install -y wget jq coreutils
 
       - name: Check for new releases
         id: check_releases
@@ -45,31 +45,29 @@ jobs:
               appimage_url="https://github.com/ente-io/ente/releases/download/${release}/ente-auth-v${version}-x86_64.AppImage"
               wget $appimage_url -O auth
               
-              ebuild_content="# Copyright\n
-          EAPI=8\n
-          DESCRIPTION=\"Ente Auth AppImage\"\n
-          SRC_URI=\"${appimage_url} -> auth\"\n
-          LICENSE=\"AGPL-3.0\"\n
-          SLOT=\"0\"\n
-          KEYWORDS=\"~amd64\"\n
-          DEPEND=\"\"\n
-          RDEPEND=\"\"\n
-          S=\"\${WORKDIR}\"\n
-          src_unpack() {\n
-            true\n
-          }\n
-          src_install() {\n
-            exeinto /usr/bin\n
-            doexe auth\n
-          }\n"
+              echo "# Copyright" > $ebuild_file
+              echo "EAPI=8" >> $ebuild_file
+              echo "DESCRIPTION=\"Ente Auth AppImage\"" >> $ebuild_file
+              echo "SRC_URI=\"${appimage_url} -> auth\"" >> $ebuild_file
+              echo "LICENSE=\"AGPL-3.0\"" >> $ebuild_file
+              echo "SLOT=\"0\"" >> $ebuild_file
+              echo "KEYWORDS=\"~amd64\"" >> $ebuild_file
+              echo "DEPEND=\"\"" >> $ebuild_file
+              echo "RDEPEND=\"\"" >> $ebuild_file
+              echo "S=\"\${WORKDIR}\"" >> $ebuild_file
+              echo "src_unpack() {" >> $ebuild_file
+              echo "  true" >> $ebuild_file
+              echo "}" >> $ebuild_file
+              echo "src_install() {" >> $ebuild_file
+              echo "  exeinto /usr/bin" >> $ebuild_file
+              echo "  doexe auth" >> $ebuild_file
+              echo "}" >> $ebuild_file
 
-              echo -e $ebuild_content > $ebuild_file
-              
               # Generate the manifest for the new ebuild
               cd $ebuild_dir
-              cat > Manifest <<EOF
-          DIST auth 0 BLAKE2B $(b2sum auth | cut -d' ' -f1) SHA512 $(sha512sum auth | cut -d' ' -f1)
-          EOF
+              b2sum auth | cut -d' ' -f1 | tee auth.blake2b
+              sha512sum auth | cut -d' ' -f1 | tee auth.sha512
+              echo "DIST auth 0 BLAKE2B $(cat auth.blake2b) SHA512 $(cat auth.sha512)" > Manifest
               cd -
             fi
           done
