@@ -5,4 +5,4 @@ KEYWORDS=~amd64
 LICENSE=AGPL-3.0
 SLOT=0
 SRC_URI=https://github.com/ente-io/ente/releases/download/auth-v3.0.12/ente-auth-v3.0.12-x86_64.AppImage -> auth
-_md5_=f798f6601427933e190c5e8623063179
+_md5_=5e2d90b055c0246d4521139c72f7d245
