@@ -1,3 +1,2 @@
-app-misc/ente-auth 3.0.12: Ente Auth AppImage
 media-video/vlc-xattrplaying_plugin 1.0.1: VLC plugin that adds 'seen' xattr tag to user.xdg.tags list when watching a video
 www-misc/which_browser 0.1.4: Which Browser? A browser selecting tool with rules to automate.
