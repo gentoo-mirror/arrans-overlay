@@ -1,4 +1,4 @@
-name: ente-auth-update-check
+name: app-misc/ente-auth-appimage Update
 
 permissions:
   contents: write
@@ -44,17 +44,15 @@ jobs:
             if [ ! -f "$ebuild_file" ]; then
               appimage_url="https://github.com/ente-io/ente/releases/download/${release}/ente-auth-v${version}-x86_64.AppImage"
 
-              # Download AppImage and Debian package
+              # Download AppImage
               wget $appimage_url -O auth
-              wget $deb_url -O auth.deb
               
               # Create ebuild script
               {
               echo "# Copyright"
               echo "EAPI=8"
               echo "DESCRIPTION=\"Ente Auth AppImage\""
-              echo "SRC_URI=\"${appimage_url} -> \"\${P}\""
-              echo "        ${deb_url} -> auth.deb\""
+              echo "SRC_URI=\"${appimage_url} -> \${P}\""
               echo "LICENSE=\"AGPL-3.0\""
               echo "SLOT=\"0\""
               echo "KEYWORDS=\"~amd64\""
@@ -66,8 +64,8 @@ jobs:
               echo ""
               echo "src_unpack() {"
               echo "    chmod a+x \${P}"
-              echo "    \${P} --appimage-extract ente_auth.desktop"
-              echo "    \${P} --appimage-extract usr/share/icons"
+              echo "    ./\${P} --appimage-extract ente_auth.desktop"
+              echo "    ./\${P} --appimage-extract usr/share/icons"
               echo "}"
               echo ""
               echo "src_prepare() {"
@@ -102,7 +100,7 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git add ./app-misc/ente-auth
+          git add ./app-misc/ente-auth-appimage
           git commit -m "Add ebuilds for new ente-auth-appimage releases" && 
           git pull --rebase &&
           git push || true
