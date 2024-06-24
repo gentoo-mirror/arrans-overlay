@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst prepare unpack
+DESCRIPTION=Ente Auth AppImage
+EAPI=8
+INHERIT=xdg-utils
+KEYWORDS=~amd64
+LICENSE=AGPL-3.0
+RDEPEND=|| ( dev-libs/libappindicator )
+SLOT=0
+SRC_URI=https://github.com/ente-io/ente/releases/download/auth-v3.0.17/ente-auth-v3.0.17-x86_64.AppImage -> ente-auth-appimage-3.0.17
+_eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3
+_md5_=a190f70ad30e4cc22b1247c33c4b55aa
