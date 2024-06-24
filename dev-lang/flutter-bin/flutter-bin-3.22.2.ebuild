@@ -15,10 +15,16 @@ RDEPEND="app-arch/tar app-arch/xz-utils"
 DEPEND=""
 S="${WORKDIR}/flutter"
 
+src_prepare() {
+  # disable upgrade_flutter
+	sed -i 's/^\(\s\+\)\(upgrade_flutter \)/\1# \2/' "${S}/bin/internal/shared.sh"
+	eapply_user
+}
+
 src_install() {
   mkdir "${ED}/opt" || die
   mv "${S}" "${ED}/opt/" || die
-  
+  # TODO create a dart eselect
   dosym "/opt/flutter/bin/flutter" '/opt/bin/flutter'
 }
 
