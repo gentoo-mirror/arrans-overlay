@@ -1,5 +1,6 @@
 app-misc/appimagetool-appimage 0.0.162: AppImage tool to create AppImages (As an AppImage)
 app-misc/ente-auth-appimage 3.0.17: Ente Auth AppImage
 media-video/vlc-xattrplaying_plugin 1.0.1: VLC plugin that adds 'seen' xattr tag to user.xdg.tags list when watching a video
+net-misc/rustdesk-appimage 1.2.6: An open-source remote desktop, and alternative to TeamViewer.
 www-apps/hugo-bin 0.127.0: The world’s fastest framework for building websites.
 www-misc/which_browser 0.1.4: Which Browser? A browser selecting tool with rules to automate.
