@@ -9,6 +9,8 @@ DEPEND=""
 RDEPEND=""
 S="${WORKDIR}"
 
+inherit xdg-utils
+
 SRC_URI="  
   amd64? ( https://github.com/rustdesk/rustdesk/releases/download/${PV}/rustdesk-${PV}-x86_64.AppImage -> $P.amd64 )
   arm64? ( https://github.com/rustdesk/rustdesk/releases/download/${PV}/rustdesk-${PV}-aarch64.AppImage -> $P.arm64 )

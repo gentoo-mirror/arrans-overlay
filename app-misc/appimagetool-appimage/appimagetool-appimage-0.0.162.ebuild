@@ -9,6 +9,8 @@ DEPEND=""
 RDEPEND=""
 S="${WORKDIR}"
 
+inherit xdg-utils
+
 SRC_URI="  
   amd64? ( https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage -> $P.amd64 )
   x86? ( https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-i686.AppImage -> $P.x86 )
