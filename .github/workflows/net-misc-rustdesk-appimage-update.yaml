@@ -5,7 +5,7 @@ permissions:
 
 on:
   schedule:
-    - cron: '5 0 * * *'
+    - cron: '15 0 * * *'
   workflow_dispatch:
   push:
     paths:
@@ -17,7 +17,7 @@ env:
   repo_owner: rustdesk
   repo_name: rustdesk
   description: "An open-source remote desktop, and alternative to TeamViewer."
-
+  homepage: "https://rustdesk.com/"
 
 jobs:
   check-and-create-ebuild:
