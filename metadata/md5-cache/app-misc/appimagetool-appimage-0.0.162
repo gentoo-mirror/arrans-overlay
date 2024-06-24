@@ -6,4 +6,4 @@ KEYWORDS=~amd64 ~x86 ~arm ~arm64
 LICENSE=MIT
 SLOT=0
 SRC_URI=amd64? ( https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage -> appimagetool-appimage-0.0.162.amd64 ) x86? ( https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-i686.AppImage -> appimagetool-appimage-0.0.162.x86 ) arm? ( https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-armhf.AppImage -> appimagetool-appimage-0.0.162.arm ) arm64? ( https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-aarch64.AppImage -> appimagetool-appimage-0.0.162.arm64 )
-_md5_=8fc6383628f11adec257bf8b244fbff3
+_md5_=c122a4f2c2fca9cf1a66b874270b72cb

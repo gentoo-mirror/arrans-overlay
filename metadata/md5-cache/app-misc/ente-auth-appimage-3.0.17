@@ -8,4 +8,4 @@ RDEPEND=|| ( dev-libs/libappindicator )
 SLOT=0
 SRC_URI=https://github.com/ente-io/ente/releases/download/auth-v3.0.17/ente-auth-v3.0.17-x86_64.AppImage -> ente-auth-appimage-3.0.17
 _eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3
-_md5_=4fc7bdf521aa0b5c8f6b1f204bbf95e1
+_md5_=2c74d088d6bb66b76e5f1ac6d94dc703
