@@ -8,6 +8,7 @@ KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 DEPEND=""
 RDEPEND=""
 S="${WORKDIR}"
+RESTRICT="strip"
 
 inherit xdg-utils
 
