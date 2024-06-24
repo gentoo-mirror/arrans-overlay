@@ -15,9 +15,9 @@ SRC_URI="
 " 
 
 src_unpack() {
-    chmod a+x "${DISTDIR}/${A}" || die 'Can't find archive file'
-    "${DISTDIR}/${A}" --appimage-extract rustdesk.desktop || die 'Can't extract .desktop from appimage'
-    "${DISTDIR}/${A}" --appimage-extract usr/share/icons || die 'Can't extract icons from app image'
+    chmod a+x "${DISTDIR}/${A}" || die "Can't find archive file"
+    "${DISTDIR}/${A}" --appimage-extract rustdesk.desktop || die "Can't extract .desktop from appimage"
+    "${DISTDIR}/${A}" --appimage-extract usr/share/icons || die "Can't extract icons from app image"
 }
 
 src_prepare() {

@@ -12,9 +12,9 @@ S="${WORKDIR}"
 inherit xdg-utils
 
 src_unpack() {
-    chmod a+x "${DISTDIR}/${A}" || die 'Can't find archive file'
-    "${DISTDIR}/${A}" --appimage-extract ente_auth.desktop || die 'Can't extract .desktop from appimage'
-    "${DISTDIR}/${A}" --appimage-extract usr/share/icons || die 'Can't extract icons from app image'
+    chmod a+x "${DISTDIR}/${A}" || die "Can't find archive file"
+    "${DISTDIR}/${A}" --appimage-extract ente_auth.desktop || die "Can't extract .desktop from appimage"
+    "${DISTDIR}/${A}" --appimage-extract usr/share/icons || die "Can't extract icons from app image"
 }
 
 src_prepare() {
