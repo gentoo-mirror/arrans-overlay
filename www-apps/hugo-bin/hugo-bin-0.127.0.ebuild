@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}"
 
 src_install() {
-    exeinto /usr/bin
+    exeinto /opt/bin
     doexe hugo
 }
 

@@ -18,11 +18,11 @@ src_unpack() {
 }
 
 src_prepare() {
-    sed -i 's:^Exec=.*:Exec=/usr/bin/ente_auth:' squashfs-root/ente_auth.desktop
+    sed -i 's:^Exec=.*:Exec=/opt/bin/ente_auth:' squashfs-root/ente_auth.desktop
 }
 
 src_install() {
-    exeinto /usr/bin
+    exeinto /opt/bin
     mv "${DISTDIR}/${P}" 'ente_auth'
     doexe ente_auth
     insinto /usr/share/applications

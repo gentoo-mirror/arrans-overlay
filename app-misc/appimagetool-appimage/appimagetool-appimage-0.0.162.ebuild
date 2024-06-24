@@ -23,12 +23,12 @@ src_unpack() {
 }
 
 src_prepare() {
-    sed -i 's:^Exec=.*:Exec=/usr/bin/appimagetool:' squashfs-root/appimagetool.desktop
+    sed -i 's:^Exec=.*:Exec=/opt/bin/appimagetool:' squashfs-root/appimagetool.desktop
 }
 
 src_install() {
     mv -v "${DISTDIR}/${A}" appimagetool
-    exeinto /usr/bin
+    exeinto /opt/bin
     doexe "appimagetool"
     insinto /usr/share/applications
     doins squashfs-root/usr/share/applications/appimagetool.desktop
