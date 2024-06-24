@@ -15,13 +15,13 @@ SRC_URI="
 " 
 
 src_unpack() {
-    chmod a+x ${P}
-    ./${P} --appimage-extract rustdesk.desktop
-    ./${P} --appimage-extract usr/share/icons
+    chmod a+x ${A}
+    ./${A} --appimage-extract rustdesk.desktop
+    ./${A} --appimage-extract usr/share/icons
 }
 
 src_prepare() {
-    sed -i 's:^Exec=.*:Exec=/usr/bin/rustdesk:' squashfs-root/rustdesk.desktop
+    sed -i 's:^Exec=.*:Exec=/opt/bin/rustdesk:' squashfs-root/rustdesk.desktop
 }
 
 src_install() {
@@ -29,9 +29,9 @@ src_install() {
     exeinto /opt/bin
     doexe "rustdesk"
     insinto /usr/share/applications
-    doins squashfs-root/usr/share/applications/rustdesk.desktop
+    doins "${DISTDIR}/squashfs-root/rustdesk.desktop"
     insinto /usr/share/
-    doins -r squashfs-root/usr/share/icons
+    doins -r "${DISTDIR}/squashfs-root/usr/share/icons"
 }
 
 pkg_postinst() {

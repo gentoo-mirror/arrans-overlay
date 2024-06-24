@@ -12,9 +12,9 @@ S="${WORKDIR}"
 inherit xdg-utils
 
 src_unpack() {
-    chmod a+x ${P}
-    ./${P} --appimage-extract ente_auth.desktop
-    ./${P} --appimage-extract usr/share/icons
+    chmod a+x ${A}
+    ./${A} --appimage-extract ente_auth.desktop
+    ./${A} --appimage-extract usr/share/icons
 }
 
 src_prepare() {
@@ -23,12 +23,12 @@ src_prepare() {
 
 src_install() {
     exeinto /opt/bin
-    mv "${DISTDIR}/${P}" 'ente_auth'
+    mv "${DISTDIR}/${P}" "ente_auth"
     doexe ente_auth
     insinto /usr/share/applications
-    doins squashfs-root/usr/share/applications/ente_auth.desktop
+    doins "${DISTDIR}/squashfs-root/ente_auth.desktop"
     insinto /usr/share/
-    doins -r squashfs-root/usr/share/icons
+    doins -r "${DISTDIR}/squashfs-root/usr/share/icons"
 }
 
 pkg_postinst() {
