@@ -22,6 +22,7 @@ src_unpack() {
 
 src_prepare() {
     sed -i 's:^Exec=.*:Exec=/opt/bin/rustdesk:' squashfs-root/rustdesk.desktop
+    eapply_user
 }
 
 src_install() {
