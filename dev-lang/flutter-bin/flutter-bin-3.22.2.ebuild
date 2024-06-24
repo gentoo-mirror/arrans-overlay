@@ -1,10 +1,12 @@
-# Copyright
+# Generated via: https://github.com/arran4/arrans_overlay/blob/main/.github/workflows/dev-lang-flutter-bin-update.yaml 
 EAPI=8
 DESCRIPTION="Flutter makes it easy and fast to build beautiful apps for mobile and beyond "
 HOMEPAGE="https://flutter.dev/"
-IUSE=""
+IUSE="+dart"
 SRC_URI="  
-  amd64? ( https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_${PV}-stable.tar.xz -> ${P}.amd64.tar.xz )
+  amd64? ( 
+    https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_${PV}-stable.tar.xz -> ${P}.amd64.tar.xz
+  )
 " 
 LICENSE="BSD"
 SLOT="0"
