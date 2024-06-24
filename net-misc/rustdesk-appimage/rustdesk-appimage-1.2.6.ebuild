@@ -10,8 +10,8 @@ RDEPEND=""
 S="${WORKDIR}"
 
 SRC_URI="  
-  amd64? ( https://github.com/rustdesk/rustdesk/releases/download/${release}/rustdesk-${PV}-x86_64.AppImage -> $P.amd64 )
-  arm64? ( https://github.com/rustdesk/rustdesk/releases/download/${release}/rustdesk-${PV}-aarch64.AppImage -> $P.arm64 )
+  amd64? ( https://github.com/rustdesk/rustdesk/releases/download/${PV}/rustdesk-${PV}-x86_64.AppImage -> $P.amd64 )
+  arm64? ( https://github.com/rustdesk/rustdesk/releases/download/${PV}/rustdesk-${PV}-aarch64.AppImage -> $P.arm64 )
 " 
 
 src_unpack() {
