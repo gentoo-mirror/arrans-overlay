@@ -7,6 +7,9 @@ on:
   schedule:
     - cron: '5 0 * * *'
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/app-misc-appimagetool-appimage-update.yaml'
 
 jobs:
   check-and-create-ebuild:
@@ -34,7 +37,7 @@ jobs:
           for run_number in ${run_numbers}; do
             echo "Processing run number: $run_number"
             version="0.0.${run_number}"
-            ebuild_file="${ebuild_dir}/appimagetool-${version}.ebuild"
+            ebuild_file="${ebuild_dir}/appimagetool-appimage-${version}.ebuild"
             if [ ! -f "$ebuild_file" ]; then
               
               # Create ebuild script
