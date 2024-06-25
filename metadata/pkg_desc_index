@@ -1,5 +1,6 @@
 app-misc/appimagetool-appimage 0.0.162: AppImage tool to create AppImages (As an AppImage)
 app-misc/ente-auth-appimage 3.0.17: Ente Auth AppImage
+app-text/jbofihe 0.43: The de facto standard parser and glosser for Lojban.
 dev-lang/dart-bin 3.4.4: The Dart SDK, including the VM, dart2js, core libraries, and more.
 dev-lang/flutter-bin 3.22.2: Flutter makes it easy and fast to build beautiful apps for mobile and beyond
 media-video/vlc-xattrplaying_plugin 1.0.1: VLC plugin that adds 'seen' xattr tag to user.xdg.tags list when watching a video
