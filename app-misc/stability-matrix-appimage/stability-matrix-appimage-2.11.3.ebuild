@@ -31,8 +31,8 @@ src_install() {
   dobin "${WORKDIR}/StabilityMatrix.AppImage" || die "Failed to install AppImage"
   insinto /usr/share/applications
   doins "${WORKDIR}/squashfs-root/zone.lykos.stabilitymatrix.desktop" || die "Failed to install .desktop file"
-  insinto /usr/share/icons/hicolor
-  doins -r "${WORKDIR}/squashfs-root/usr/share/icons" || die "Failed to install icons"
+  insinto /usr/share/icons
+  doins -r "${WORKDIR}/squashfs-root/usr/share/icons/hicolor/" || die "Failed to install icons"
 }
 
 pkg_postinst() {
