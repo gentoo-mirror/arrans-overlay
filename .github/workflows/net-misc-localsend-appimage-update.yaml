@@ -1,22 +1,22 @@
-name: app-misc/lemmy_notify-appimage update
+name: net-misc/localsend-appimage update
 
 permissions:
   contents: write
 
 on:
   schedule:
-    - cron: '55 0 * * *'
+    - cron: '5 1 * * *'
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/app-misc-lemmy_notify-appimage-update.yaml'
+      - '.github/workflows/net-misc-localsend-appimage-update.yaml'
 
 env:
-  ecn: app-misc
-  epn: lemmy_notify-appimage
-  description: "Lemmy Notification app - for desktop atm"
-  homepage: "https://github.com/arran4/lemmy_notify"
-  appimage_name: lemmy_notify.AppImage
+  ecn: net-misc
+  epn: localsend-appimage
+  description: "An open-source cross-platform alternative to AirDrop"
+  homepage: "https://localsend.org"
+  appimage_name: LocalSend.AppImage
 
 jobs:
   check-and-create-ebuild:
@@ -40,7 +40,7 @@ jobs:
         run: |
           ebuild_dir="./${{ env.ecn }}/${{ env.epn }}"
           mkdir -p $ebuild_dir
-          latest_release=$(curl -s https://api.github.com/repos/arran4/lemmy_notify/releases/latest | jq -r '.tag_name')
+          latest_release=$(curl -s https://api.github.com/repos/localsend/localsend/releases/latest | jq -r '.tag_name')
           version="${latest_release#v}"
           ebuild_file="${ebuild_dir}/${{ env.epn }}-${version}.ebuild"
           if [ ! -f "$ebuild_file" ]; then
@@ -55,14 +55,14 @@ jobs:
                 echo 'SLOT="0"'
                 echo 'KEYWORDS="~amd64"'
                 echo 'DEPEND=""'
-                echo 'RDEPEND="dev-libs/libappindicator"'
+                echo 'RDEPEND=""'
                 echo 'S="${WORKDIR}"'
                 echo 'RESTRICT="strip"'
                 echo ''
                 echo "inherit xdg-utils"
                 echo ''
                 echo 'SRC_URI="  '
-                echo '  amd64? ( https://github.com/arran4/lemmy_notify/releases/download/v${PV}/lemmy_notify-${PV}-x86_64.AppImage -> $P.amd64 )'
+                echo '  amd64? ( https://github.com/localsend/localsend/releases/download/v${PV}/LocalSend-${PV}-linux-x86-64.AppImage -> $P.amd64 )'
                 echo '" '
                 echo ''
                 echo "src_unpack() {"
@@ -82,7 +82,7 @@ jobs:
                 echo '  mv "${WORKDIR}/${P}.amd64" "${WORKDIR}/${{ env.appimage_name }}"'
                 echo '  exeinto /opt/bin'
                 echo '  doexe "${WORKDIR}/${{ env.appimage_name }}" || die "Failed to install AppImage"'
-                echo '  dosym /opt/bin/${{ env.appimage_name }} /usr/bin/lemmy_notify'
+                echo '  dosym /opt/bin/${{ env.appimage_name }} /usr/bin/LocalSend'
                 echo '  insinto /usr/share/applications'
                 echo '  doins "${WORKDIR}/squashfs-root/*.desktop" || die "Failed to install .desktop file"'
                 echo '  insinto /usr/share/icons/hicolor'
@@ -96,7 +96,7 @@ jobs:
               } > $ebuild_file
 
               # Generate the manifest for the new ebuild
-              wget https://github.com/arran4/lemmy_notify/releases/download/${latest_release}/lemmy_notify-${version}-x86_64.AppImage -O /tmp/${{ env.epn }}-${version}.amd64
+              wget https://github.com/localsend/localsend/releases/download/v${latest_release}/LocalSend-${version}-linux-x86-64.AppImage -O /tmp/${{ env.epn }}-${version}.amd64
               
               for e in ${{ env.epn }}-${version}.amd64; do
                 echo "DIST $e $(stat -c %s "/tmp/${e}") BLAKE2B $(b2sum "/tmp/${e}" | cut -d' ' -f1) SHA512 $(sha512sum "/tmp/${e}" | cut -d' ' -f1)" | tee -a "${ebuild_dir}/Manifest"
