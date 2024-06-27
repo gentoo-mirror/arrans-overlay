@@ -36,8 +36,8 @@ src_install() {
   dosym /opt/bin/LocalSend.AppImage /usr/bin/LocalSend
   insinto /usr/share/applications
   doins "${WORKDIR}/squashfs-root/*.desktop" || die "Failed to install .desktop file"
-  insinto /usr/share/icons/hicolor
-  doins -r "${WORKDIR}/squashfs-root/usr/share/icons" || die "Failed to install icons"
+  insinto /usr/share/icons
+  doins -r "${WORKDIR}/squashfs-root/usr/share/icons/hicolor" || die "Failed to install icons"
 }
 
 pkg_postinst() {
