@@ -13,8 +13,8 @@ RESTRICT="strip"
 inherit xdg-utils
 
 SRC_URI="  
-  amd64? ( https://github.com/Bin-Huang/chatbox/releases/download/${latest_release}/Chatbox-${version}-x86_64.AppImage -> $P.amd64 )
-  arm64? ( https://github.com/Bin-Huang/chatbox/releases/download/${latest_release}/Chatbox-${version}-arm64.AppImage -> $P.arm64 )
+  amd64? ( https://github.com/Bin-Huang/chatbox/releases/download/v${PV}/Chatbox-${PV}-x86_64.AppImage -> $P.amd64 )
+  arm64? ( https://github.com/Bin-Huang/chatbox/releases/download/v${PV}/Chatbox-${PV}-arm64.AppImage -> $P.arm64 )
 " 
 
 src_unpack() {

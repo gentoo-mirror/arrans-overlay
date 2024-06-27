@@ -14,9 +14,9 @@ RESTRICT="strip"
 inherit xdg-utils
 
 SRC_URI="  
-  amd64? ( https://github.com/ollama/ollama/releases/download/${latest_release}/ollama-linux-amd64 -> $P.amd64 )
-  arm64? ( https://github.com/ollama/ollama/releases/download/${latest_release}/ollama-linux-arm64 -> $P.arm64 )
-  rocm? ( https://github.com/ollama/ollama/releases/download/${latest_release}/ollama-linux-amd64-rocm.tgz -> $P.rocm.tgz )
+  amd64? ( https://github.com/ollama/ollama/releases/download/${PV}/ollama-linux-amd64 -> $P.amd64 )
+  arm64? ( https://github.com/ollama/ollama/releases/download/${PV}/ollama-linux-arm64 -> $P.arm64 )
+  rocm? ( https://github.com/ollama/ollama/releases/download/${PV}/ollama-linux-amd64-rocm.tgz -> $P.rocm.tgz )
 " 
 
 pkg_setup() {
