@@ -11,7 +11,6 @@ RDEPEND="acct-user/ollama"
 S="${WORKDIR}"
 RESTRICT="strip"
 
-inherit user
 inherit xdg-utils
 
 SRC_URI="  
