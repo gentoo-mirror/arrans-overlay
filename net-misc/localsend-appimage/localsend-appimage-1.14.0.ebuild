@@ -24,8 +24,8 @@ src_unpack() {
 }
 
 src_prepare() {
-  sed -i 's:^Exec=.*:Exec=/opt/bin/LocalSend.AppImage:' squashfs-root/*.desktop
-  sed -i 's:^TryExec=.*:TryExec=/opt/bin/LocalSend.AppImage:' squashfs-root/*.desktop
+  sed -i 's:^Exec=.*:Exec=/opt/bin/LocalSend.AppImage:' squashfs-root/LocalSend.desktop
+  sed -i 's:^TryExec=.*:TryExec=/opt/bin/LocalSend.AppImage:' squashfs-root/LocalSend.desktop
   eapply_user
 }
 
@@ -35,7 +35,7 @@ src_install() {
   doexe "${WORKDIR}/LocalSend.AppImage" || die "Failed to install AppImage"
   dosym /opt/bin/LocalSend.AppImage /usr/bin/LocalSend
   insinto /usr/share/applications
-  doins "${WORKDIR}/squashfs-root/*.desktop" || die "Failed to install .desktop file"
+  doins "${WORKDIR}/squashfs-root/LocalSend.desktop" || die "Failed to install .desktop file"
   insinto /usr/share/icons
   doins -r "${WORKDIR}/squashfs-root/usr/share/icons/hicolor" || die "Failed to install icons"
 }

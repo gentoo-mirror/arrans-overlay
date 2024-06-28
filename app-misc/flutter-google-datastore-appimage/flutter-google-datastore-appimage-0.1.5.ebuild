@@ -24,8 +24,8 @@ src_unpack() {
 }
 
 src_prepare() {
-  sed -i 's:^Exec=.*:Exec=/opt/bin/FlutterGoogleDatastore.AppImage:' squashfs-root/*.desktop
-  sed -i 's:^TryExec=.*:TryExec=/opt/bin/FlutterGoogleDatastore.AppImage:' squashfs-root/*.desktop
+  sed -i 's:^Exec=.*:Exec=/opt/bin/FlutterGoogleDatastore.AppImage:' squashfs-root/flutter_google_datastore.desktop
+  sed -i 's:^TryExec=.*:TryExec=/opt/bin/FlutterGoogleDatastore.AppImage:' squashfs-root/flutter_google_datastore.desktop
   eapply_user
 }
 
@@ -35,7 +35,7 @@ src_install() {
   doexe "${WORKDIR}/FlutterGoogleDatastore.AppImage" || die "Failed to install AppImage"
   dosym /opt/bin/FlutterGoogleDatastore.AppImage /usr/bin/FlutterGoogleDatastore
   insinto /usr/share/applications
-  doins "${WORKDIR}/squashfs-root/*.desktop" || die "Failed to install .desktop file"
+  doins "${WORKDIR}/squashfs-root/flutter_google_datastore.desktop" || die "Failed to install .desktop file"
   insinto /usr/share/icons
   doins -r "${WORKDIR}/squashfs-root/usr/share/icons/hicolor" || die "Failed to install icons"
 }

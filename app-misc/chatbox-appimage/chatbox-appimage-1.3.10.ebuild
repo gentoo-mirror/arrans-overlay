@@ -26,6 +26,7 @@ src_unpack() {
 
 src_prepare() {
   sed -i 's:^Exec=.*:Exec=/opt/bin/ChatBox.AppImage:' squashfs-root/*.desktop
+  sed -i 's:^Icon=.*:Icon=/usr/share/icons/hicolor/512x512/apps/xyz.chatboxapp.app.png:' squashfs-root/*.desktop
   sed -i 's:^TryExec=.*:TryExec=/opt/bin/ChatBox.AppImage:' squashfs-root/*.desktop
   eapply_user
 }
@@ -37,8 +38,8 @@ src_install() {
   dosym /opt/bin/ChatBox.AppImage /usr/bin/ChatBox
   insinto /usr/share/applications
   doins "${WORKDIR}/squashfs-root/xyz.chatboxapp.app.desktop" || die "Failed to install .desktop file"
-  insinto /usr/share/icons/hicolor
-  doins -r "${WORKDIR}/squashfs-root/usr/share/icons" || die "Failed to install icons"
+  insinto /usr/share/icons
+  doins -r "${WORKDIR}/squashfs-root/usr/share/icons/hicolor" || die "Failed to install icons"
 }
 
 pkg_postinst() {
