@@ -6,8 +6,8 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 IUSE="+systemd -rocm"
-DEPEND="acct-user/ollama"
-RDEPEND="acct-user/ollama"
+DEPEND="acct-user/ollama acct-group/ollama"
+RDEPEND="acct-user/ollama acct-group/ollama"
 S="${WORKDIR}"
 RESTRICT="strip"
 
@@ -27,14 +27,14 @@ src_unpack() {
 
 src_install() {
   if use amd64; then
-    cp "${DISTDIR}/${P}.amd64" "${D}/opt/Ollama/ollama"
+    cp "${DISTDIR}/${P}.amd64" "${D}/ollama"
   elif use arm64; then
-    cp "${DISTDIR}/${P}.arm64" "${D}/opt/Ollama/ollama"
+    cp "${DISTDIR}/${P}.arm64" "${D}/ollama"
   fi
   exeinto /opt/Ollama
-  doexe "${D}/opt/Ollama/ollama" || die "Failed to install binary"
+  doexe "${D}/ollama" || die "Failed to install binary"
   fperms +x /opt/Ollama/ollama
-  dosym /opt/Ollama/ollama /usr/bin/ollama
+  dosym /opt/Ollama/ollama /opt/bin/ollama
 }
 
 src_prepare() {
