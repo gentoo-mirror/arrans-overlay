@@ -16,8 +16,8 @@ SRC_URI="https://github.com/janhq/jan/releases/download/v${PV}/jan-linux-x86_64-
 src_unpack() {
   cp "${DISTDIR}/${A}" "${A}"  || die "Can't copy archive file"
   chmod a+x "${A}"  || die "Can't chmod archive file"
-  ./ --appimage-extract jan.desktop || die "Can't extract .desktop from appimage"
-  ./ --appimage-extract usr/share/icons || die "Can't extract icons from app image"
+  ./${A} --appimage-extract jan.desktop || die "Can't extract .desktop from appimage"
+  ./${A} --appimage-extract usr/share/icons || die "Can't extract icons from app image"
 }
 
 src_prepare() {
