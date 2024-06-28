@@ -26,6 +26,8 @@ src_unpack() {
 src_prepare() {
   sed -i 's:^Exec=.*:Exec=/opt/bin/LocalSend.AppImage:' squashfs-root/org.localsend.localsend_app.desktop
   sed -i 's:^TryExec=.*:TryExec=/opt/bin/LocalSend.AppImage:' squashfs-root/org.localsend.localsend_app.desktop
+  find squashfs-root -type d -exec rmdir -p {} \; 
+  find squashfs-root -type f \( -name index.theme -or -name icon-theme.cache \) -exec rm -v {} \; 
   eapply_user
 }
 
