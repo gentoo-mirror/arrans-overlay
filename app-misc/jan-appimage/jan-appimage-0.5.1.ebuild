@@ -28,7 +28,9 @@ src_prepare() {
 src_install() {
   exeinto /opt/bin
   doexe ${A}
-  domenu squashfs-root/jan.desktop
-  doicon squashfs-root/usr/share/icons/*
+  insinto /usr/share/applications
+  doins squashfs-root/${DESKTOP_FILE}
+  insinto /usr/share/icons
+  doins -r squashfs-root/usr/share/icons/*
 }
 
