@@ -6,8 +6,8 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 IUSE="+systemd -rocm"
-DEPEND=""
-RDEPEND=""
+DEPEND="acct-user/ollama"
+RDEPEND="acct-user/ollama"
 S="${WORKDIR}"
 RESTRICT="strip"
 
@@ -19,11 +19,6 @@ SRC_URI="
   arm64? ( https://github.com/ollama/ollama/releases/download/v${PV}/ollama-linux-arm64 -> $P.arm64 )
   rocm? ( https://github.com/ollama/ollama/releases/download/v${PV}/ollama-linux-amd64-rocm.tgz -> $P.rocm.tgz )
 " 
-
-pkg_setup() {
-  enewgroup ollama
-  enewuser ollama -1 -1 /usr/share/ollama ollama
-}
 
 src_unpack() {
   if use rocm; then
@@ -54,22 +49,25 @@ pkg_postinst() {
   einfo "See available models at https://ollama.com/library"
   if use systemd; then
     einfo "Creating systemd service file..."
-    cat <<EOF > /etc/systemd/system/ollama.service
-[Unit]
-Description=Ollama Service
-After=network-online.target
-
-[Service]
-ExecStart=/opt/Ollama/ollama serve
-User=ollama
-Group=ollama
-Restart=always
-RestartSec=3
-
-[Install]
-WantedBy=default.target
-EOF
+    {
+      echo "[Unit]"
+      echo "Description=Ollama Service"
+      echo "After=network-online.target"
+      echo ""
+      echo "[Service]"
+      echo "ExecStart=/opt/Ollama/ollama serve"
+      echo "User=ollama"
+      echo "Group=ollama"
+      echo "Restart=always"
+      echo "RestartSec=3"
+      echo ""
+      echo "[Install]"
+      echo "WantedBy=default.target"
+    } > /etc/systemd/system/ollama.service
     einfo "Service file created at /etc/systemd/system/ollama.service"
+    einfo "Making service user-startable..."
+    mkdir -p /etc/systemd/user
+    ln -s /etc/systemd/system/ollama.service /etc/systemd/user/ollama.service
   fi
 }
 
