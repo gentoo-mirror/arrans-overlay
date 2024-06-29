@@ -14,10 +14,10 @@ RESTRICT="strip"
 SRC_URI="https://github.com/sindresorhus/caprine/releases/download/v${PV}/Caprine-${PV}.AppImage -> ${P}.AppImage"
 
 src_unpack() {
-  cp "${DISTDIR}/${A}" "${A}" || die "Cant copy archive file'
-      echo '  chmod a+x  || die Cant chmod archive file"
-  "./${A}" --appimage-extract caprine.desktop || die "Cant extract .desktop from appimage'
-      echo '  ./ --appimage-extract usr/share/icons || die Cant extract icons from app image"
+  cp "${DISTDIR}/${A}" "${A}" || die "Can't copy archive file"
+  chmod a+x "${A}" || die "Can't chmod archive file"
+  "./${A}" --appimage-extract caprine.desktop || die "Can't extract .desktop from appimage"
+  "./${A}" --appimage-extract usr/share/icons || die "Can't extract icons from app image"
 }
 
 src_prepare() {
