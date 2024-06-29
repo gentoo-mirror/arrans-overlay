@@ -11,7 +11,7 @@ RDEPEND=""
 S="${WORKDIR}"
 RESTRICT="strip"
 
-SRC_URI="https://github.com/janhq/jan/releases/download/v${PV}/jan-linux-x86_64-${PV}.AppImage -> ${P}.AppImage"
+SRC_URI="https://github.com//janhq/jan/releases/download/v${PV}/jan-linux-x86_64-${PV}.AppImage -> ${P}.AppImage"
 
 src_unpack() {
   cp "${DISTDIR}/${A}" "${A}"  || die "Can't copy archive file"
@@ -26,11 +26,12 @@ src_prepare() {
 }
 
 src_install() {
+  mv "${P}.amd64" "jan"
   exeinto /opt/bin
-  doexe ${A}
+  doexe "jan" || die "Failed to install AppImage"
   insinto /usr/share/applications
   doins squashfs-root/jan.desktop
   insinto /usr/share/icons
-  doins -r squashfs-root/usr/share/icons/*
+  doins -r squashfs-root/usr/share/icons/hicolor
 }
 
