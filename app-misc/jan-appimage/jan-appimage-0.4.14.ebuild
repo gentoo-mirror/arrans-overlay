@@ -11,6 +11,8 @@ RDEPEND=""
 S="${WORKDIR}"
 RESTRICT="strip"
 
+inherit xdg-utils
+
 SRC_URI="https://github.com//janhq/jan/releases/download/v${PV}/jan-linux-x86_64-${PV}.AppImage -> ${P}.amd64"
 
 src_unpack() {
