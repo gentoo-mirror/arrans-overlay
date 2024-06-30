@@ -2,7 +2,7 @@
 EAPI=8
 DESCRIPTION=" Deliver Go binaries as fast and easily as possible."
 HOMEPAGE="https://goreleaser.com/"
-IUSE=""
+IUSE="man"
 SRC_URI="
   amd64? ( https://github.com/goreleaser/goreleaser/releases/download/v${PV}/goreleaser_Linux_x86_64.tar.gz -> ${P}.amd64.tar.gz )
   arm? ( https://github.com/goreleaser/goreleaser/releases/download/v${PV}/goreleaser_Linux_armv7.tar.gz -> ${P}.arm.tar.gz )
@@ -26,6 +26,8 @@ src_install() {
     doins completions/goreleaser.fish
     insinto /usr/share/zsh/site-functions
     doins completions/goreleaser.zsh
-    doman manpages/goreleaser1.gz
+    if use man; then
+      doman manpages/goreleaser.1.gz
+    fi
 }
 
