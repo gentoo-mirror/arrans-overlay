@@ -2,7 +2,7 @@
 EAPI=8
 DESCRIPTION="Distribute and run whisper LLMs with a single file."
 HOMEPAGE="https://github.com/cjpais/whisperfile"
-IUSE="doc man"
+IUSE=""
 SRC_URI="amd64? ( https://github.com/cjpais/whisperfile/releases/download/${PV}/whisperfile-${PV} -> ${P}.amd64 )"
 LICENSE="Apache 2.0"
 SLOT="0"
@@ -12,12 +12,12 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}"
 
 src_unpack() {
-  mv "${A}" 'whisperfile'
+    mv "${A}" 'whisperfile'
+    chmod +x 'whisperfile' or die 'failed to chmod whisperfile'
 }
 
 src_install() {
-    chmod +x 'whisperfile'
     exeinto /opt/bin
-    doexe 'whisperfile'
+    doexe "${WORKDIR}/whisperfile"
 }
 

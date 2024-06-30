@@ -59,7 +59,7 @@ jobs:
                 echo "EAPI=8"
                 echo "DESCRIPTION=\"$description\""
                 echo "HOMEPAGE=\"$homepage\""
-                echo 'IUSE="doc man"'
+                echo 'IUSE=""'
                 echo 'SRC_URI="amd64? ( https://github.com/${{env.repo_owner}}/${{env.repo_name}}/releases/download/${PV}/${{env.repo_name}}-${PV} -> ${P}.amd64 )"'
                 echo "LICENSE=\"${{ env.license }}\""
                 echo "SLOT=\"0\""
@@ -69,13 +69,13 @@ jobs:
                 echo "S=\"\${WORKDIR}\""
                 echo ""
                 echo "src_unpack() {"
-                echo "  mv \"\${A}\" '${{env.repo_name}}'"
+                echo "    mv \"\${A}\" '${{env.repo_name}}'"
+                echo "    chmod +x '${{env.repo_name}}' or die 'failed to chmod ${{env.repo_name}}'"
                 echo "}"
                 echo ""
                 echo "src_install() {"
-                echo "    chmod +x '${{env.repo_name}}'"
                 echo "    exeinto /opt/bin"
-                echo "    doexe '${{env.repo_name}}'"
+                echo "    doexe \"\${WORKDIR}/${{env.repo_name}}\""
                 echo "}"
                 echo ""
               } > $ebuild_file
