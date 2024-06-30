@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst prepare unpack
+DESCRIPTION=Lemmy Notification app - for desktop atm
+EAPI=8
+HOMEPAGE=https://github.com/arran4/lemmy_notify
+INHERIT=xdg-utils
+KEYWORDS=~amd64
+LICENSE=Unknown
+RDEPEND=dev-libs/libappindicator
+RESTRICT=strip
+SLOT=0
+SRC_URI=amd64? ( https://github.com/arran4/lemmy_notify/releases/download/v0.0.4/lemmy_notify-linux-x86_64.AppImage -> lemmy_notify-appimage-0.0.4.amd64 )
+_eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3
+_md5_=58dcc8feb0362d804bdbb17261ab8857
