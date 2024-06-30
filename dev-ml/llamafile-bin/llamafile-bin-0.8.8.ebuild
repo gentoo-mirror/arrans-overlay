@@ -9,7 +9,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 RDEPEND=""
 DEPEND="${RDEPEND}"
-S="${WORKDIR}/${P}"
+S="${WORKDIR}/llamafile-${PV}"
 
 src_install() {
     exeinto /opt/bin
