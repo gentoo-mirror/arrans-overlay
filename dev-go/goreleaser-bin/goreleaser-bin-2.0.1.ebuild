@@ -15,6 +15,7 @@ KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 RDEPEND=""
 DEPEND="${RDEPEND}"
 S="${WORKDIR}"
+RESTRICT="strip"
 
 src_install() {
     exeinto /opt/bin
@@ -27,7 +28,8 @@ src_install() {
     insinto /usr/share/zsh/site-functions
     doins completions/goreleaser.zsh
     if use man; then
-      doman manpages/goreleaser.1.gz
+      gzip -d manpages/goreleaser.1.gz
+      doman manpages/goreleaser.1
     fi
 }
 
