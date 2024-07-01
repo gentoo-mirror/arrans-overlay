@@ -9,4 +9,4 @@ LICENSE=Apache 2.0
 RDEPEND=acct-group/whisperfile acct-user/whisperfile
 SLOT=0
 SRC_URI=amd64? ( full? ( https://huggingface.co/cjpais/whisperfile/resolve/main/whisper.small.llamafile?download=true -> whisperfile-small-bin-0.amd64 ) q5k? ( https://huggingface.co/cjpais/whisperfile/resolve/main/whisper.small.q5k.llamafile?download=true -> whisperfile-small-bin-0.q5k.amd64 ) q8? ( https://huggingface.co/cjpais/whisperfile/resolve/main/whisper.small.q8.llamafile?download=true -> whisperfile-small-bin-0.q8.amd64 ) )
-_md5_=3b5298daba886c9711951d18c592723c
+_md5_=df8b4e744324ab897b487aebd40c54c3
