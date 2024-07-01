@@ -1,5 +1,7 @@
 acct-group/ollama 0-r1: System group: ollama
+acct-group/whisperfile 0-r1: System group: whisperfile
 acct-user/ollama 0-r1: System user for ollama
+acct-user/whisperfile 0-r1: System user for whisperfile
 app-admin/chezmoi-bin 2.49.1: Manage your dotfiles across multiple diverse machines, securely.
 app-dicts/lojban-dicts 2005: Lojban Text Dictionaries
 app-misc/appimagetool-appimage 0.0.162: AppImage tool to create AppImages (As an AppImage)
