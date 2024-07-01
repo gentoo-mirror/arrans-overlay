@@ -17,16 +17,16 @@ S="${WORKDIR}"
 
 src_unpack() {
     if use full; then
-      mv "${P}.amd64" 'whisper.medium.llamafile' or die 'failed to move whisper.medium.llamafile'
-      chmod +x 'whisper.medium.llamafile' or die 'failed to chmod whisper.medium.llamafile'
+      mv "${P}.amd64" 'whisper.medium.llamafile' || die 'failed to move whisper.medium.llamafile'
+      chmod +x 'whisper.medium.llamafile' || die 'failed to chmod whisper.medium.llamafile'
     fi
     if use q5k; then
-      mv "${P}.${variant}.amd64" 'whisper.medium.q5k.llamafile' or die 'failed to move whisper.medium.q5k.llamafile'
-      chmod +x 'whisper.medium.q5k.llamafile' or die 'failed to chmod whisper.medium.q5k.llamafile'
+      mv "${P}.${variant}.amd64" 'whisper.medium.q5k.llamafile' || die 'failed to move whisper.medium.q5k.llamafile'
+      chmod +x 'whisper.medium.q5k.llamafile' || die 'failed to chmod whisper.medium.q5k.llamafile'
     fi
     if use q8; then
-      mv "${P}.${variant}.amd64" 'whisper.medium.q8.llamafile' or die 'failed to move whisper.medium.q8.llamafile'
-      chmod +x 'whisper.medium.q8.llamafile' or die 'failed to chmod whisper.medium.q8.llamafile'
+      mv "${P}.${variant}.amd64" 'whisper.medium.q8.llamafile' || die 'failed to move whisper.medium.q8.llamafile'
+      chmod +x 'whisper.medium.q8.llamafile' || die 'failed to chmod whisper.medium.q8.llamafile'
     fi
 }
 

@@ -17,16 +17,16 @@ S="${WORKDIR}"
 
 src_unpack() {
     if use full; then
-      mv "${P}.amd64" 'whisper.large-v3.llamafile' or die 'failed to move whisper.large-v3.llamafile'
-      chmod +x 'whisper.large-v3.llamafile' or die 'failed to chmod whisper.large-v3.llamafile'
+      mv "${P}.amd64" 'whisper.large-v3.llamafile' || die 'failed to move whisper.large-v3.llamafile'
+      chmod +x 'whisper.large-v3.llamafile' || die 'failed to chmod whisper.large-v3.llamafile'
     fi
     if use q5k; then
-      mv "${P}.${variant}.amd64" 'whisper.large-v3.q5k.llamafile' or die 'failed to move whisper.large-v3.q5k.llamafile'
-      chmod +x 'whisper.large-v3.q5k.llamafile' or die 'failed to chmod whisper.large-v3.q5k.llamafile'
+      mv "${P}.${variant}.amd64" 'whisper.large-v3.q5k.llamafile' || die 'failed to move whisper.large-v3.q5k.llamafile'
+      chmod +x 'whisper.large-v3.q5k.llamafile' || die 'failed to chmod whisper.large-v3.q5k.llamafile'
     fi
     if use q8; then
-      mv "${P}.${variant}.amd64" 'whisper.large-v3.q8.llamafile' or die 'failed to move whisper.large-v3.q8.llamafile'
-      chmod +x 'whisper.large-v3.q8.llamafile' or die 'failed to chmod whisper.large-v3.q8.llamafile'
+      mv "${P}.${variant}.amd64" 'whisper.large-v3.q8.llamafile' || die 'failed to move whisper.large-v3.q8.llamafile'
+      chmod +x 'whisper.large-v3.q8.llamafile' || die 'failed to chmod whisper.large-v3.q8.llamafile'
     fi
 }
 
