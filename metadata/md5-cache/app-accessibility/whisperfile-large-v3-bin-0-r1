@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst unpack
+DEPEND=acct-group/whisperfile acct-user/whisperfile
+DESCRIPTION=Run whisper speach recognition large-v3 LLM in a single binary executable using llamafile.
+EAPI=8
+HOMEPAGE=https://github.com/cjpais/whisperfile
+IUSE=systemd +full q5k q8
+KEYWORDS=~amd64
+LICENSE=Apache 2.0
+RDEPEND=acct-group/whisperfile acct-user/whisperfile
+SLOT=0
+SRC_URI=amd64? ( full? ( https://huggingface.co/cjpais/whisperfile/resolve/main/whisper.large-v3.llamafile?download=true -> whisperfile-large-v3-bin-0.amd64 ) q5k? ( https://huggingface.co/cjpais/whisperfile/resolve/main/whisper.large-v3.q5k.llamafile?download=true -> whisperfile-large-v3-bin-0.q5k.amd64 ) q8? ( https://huggingface.co/cjpais/whisperfile/resolve/main/whisper.large-v3.q8.llamafile?download=true -> whisperfile-large-v3-bin-0.q8.amd64 ) )
+_md5_=6aab64f53241660c440244b64991b70f
