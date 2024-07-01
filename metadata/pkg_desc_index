@@ -2,11 +2,6 @@ acct-group/ollama 0-r1: System group: ollama
 acct-group/whisperfile 0-r1: System group: whisperfile
 acct-user/ollama 0-r1: System user for ollama
 acct-user/whisperfile 0-r1: System user for whisperfile
-app-accessibility/whisperfile-base-bin 0-r1: Run whisper speach recognition base LLM in a single binary executable using llamafile.
-app-accessibility/whisperfile-large-v3-bin 0-r1: Run whisper speach recognition large-v3 LLM in a single binary executable using llamafile.
-app-accessibility/whisperfile-medium-bin 0-r1: Run whisper speach recognition medium LLM in a single binary executable using llamafile.
-app-accessibility/whisperfile-small-bin 0-r1: Run whisper speach recognition small LLM in a single binary executable using llamafile.
-app-accessibility/whisperfile-tiny-bin 0-r1: Run whisper speach recognition tiny LLM in a single binary executable using llamafile.
 app-admin/chezmoi-bin 2.49.1: Manage your dotfiles across multiple diverse machines, securely.
 app-dicts/lojban-dicts 2005: Lojban Text Dictionaries
 app-misc/appimagetool-appimage 0.0.162: AppImage tool to create AppImages (As an AppImage)
