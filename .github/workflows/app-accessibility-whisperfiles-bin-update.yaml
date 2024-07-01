@@ -71,21 +71,21 @@ jobs:
                 echo "DESCRIPTION=\"Run whisper speach recognition $model LLM in a single binary executable using llamafile.\""
                 echo "HOMEPAGE=\"$homepage\""
                 echo -n 'IUSE="systemd '
-                for variant in ${grouped[$key]}; do
-                  if [ -z "${variant}" ]; do
+                for variant in ${grouped[$model]}; do
+                  if [ -z "${variant}" ]; then
                     echo -n "+full ";
                     continue
-                  done
+                  fi
                   echo -n "$variant "
                 done
                 echo '"'
                 echo 'SRC_URI="amd64? ( '
-                for variant in ${grouped[$key]}; do
-                  if [ -z "${variant}" ]; do
-                    echo "  full? ( https://huggingface.co/${{env.huggingface_owner}}/${{env.huggingface_repo}}/resolve/${{env.huggingface_repo_branch}}/whisper.${model}.llamafile?download=true -> \${P}.amd64 )"'
+                for variant in ${grouped[$model]}; do
+                  if [ -z "${variant}" ]; then
+                    echo "  full? ( https://huggingface.co/${{env.huggingface_owner}}/${{env.huggingface_repo}}/resolve/${{env.huggingface_repo_branch}}/whisper.${model}.llamafile?download=true -> \${P}.amd64 )"
                     continue
-                  done
-                  echo "  $variant? ( https://huggingface.co/${{env.huggingface_owner}}/${{env.huggingface_repo}}/resolve/${{env.huggingface_repo_branch}}/whisper.${model}.${varaint}.llamafile?download=true -> \${P}.${variant}.amd64 )"'
+                  fi
+                  echo "  $variant? ( https://huggingface.co/${{env.huggingface_owner}}/${{env.huggingface_repo}}/resolve/${{env.huggingface_repo_branch}}/whisper.${model}.${varaint}.llamafile?download=true -> \${P}.${variant}.amd64 )"
                 done
                 echo ')"'
                 echo "LICENSE=\"${{ env.license }}\""
@@ -96,7 +96,7 @@ jobs:
                 echo "S=\"\${WORKDIR}\""
                 echo ""
                 echo "src_unpack() {"
-                for variant in ${grouped[$key]}; do
+                for variant in ${grouped[$model]}; do
                   mvfn="whisper.${model}.llamafile"
                   mvafn='${P}.amd64'
                   condition=full
@@ -114,7 +114,7 @@ jobs:
                 echo ""
                 echo "src_install() {"
                 echo "    exeinto /opt/bin"
-                for variant in ${grouped[$key]}; do
+                for variant in ${grouped[$model]}; do
                   mvfn="whisper.${model}.llamafile"
                   condition=full
                   if [ ! -z "${variant}" ]; then
@@ -128,7 +128,7 @@ jobs:
                 echo "}"
                 echo ""
                 echo "pkg_postinst() {"
-                for variant in ${grouped[$key]}; do
+                for variant in ${grouped[$model]}; do
                   mvfn="whisper.${model}.llamafile"
                   condition=full
                   if [ ! -z "${variant}" ]; then
@@ -139,7 +139,7 @@ jobs:
                   echo "    if use $condition; then"
                   echo "      doexe \"\${WORKDIR}/${mvfn}\""
                   echo "      einfo \"${mvfn} --host 0.0.0.0 --port 51524 --convert -pc -pr -pp\""
-                  echo "      einfo \"curl 127.0.0.1:51524/inference -H "Content-Type: multipart/form-data" -F file="@<file-path>"  -F temperature="0.0"  -F temperature_inc="0.2"  -F response_format="json" ""
+                  echo '      einfo "curl 127.0.0.1:51524/inference -H \"Content-Type: multipart/form-data\" -F file=\"@<file-path>\"  -F temperature=\"0.0\"  -F temperature_inc=\"0.2\"  -F response_format=\"json\""'
                   echo "      if use systemd; then"
                   echo "      einfo \"Creating systemd service file...\""
                   echo '      {'
@@ -168,13 +168,13 @@ jobs:
                 echo ""
               } > $ebuild_file
               # Generate the manifest for the new ebuild
-              for variant in ${grouped[$key]}; do
+              for variant in ${grouped[$model]}; do
                 url="https://huggingface.co/${{env.huggingface_owner}}/${{env.huggingface_repo}}/resolve/${{env.huggingface_repo_branch}}/whisper.${model}.llamafile?download=true"
                 fn="${ebuild_name}.amd64"
-                if [ ! -z "${variant}" ]; do
+                if [ ! -z "${variant}" ]; then
                   url="https://huggingface.co/${{env.huggingface_owner}}/${{env.huggingface_repo}}/resolve/${{env.huggingface_repo_branch}}/whisper.${varaint}.${model}.llamafile?download=true"
                   fn="${ebuild_name}.${varaint}.amd64"
-                done
+                fi
                 wget "${url}" -O "/tmp/${fn}"
                 echo "DIST ${fn} $(stat -c %s "/tmp/${fn}") BLAKE2B $(b2sum "/tmp/${fn}" | cut -d' ' -f1) SHA512 $(sha512sum "/tmp/${fn}" | cut -d' ' -f1)" | tee -a "${ebuild_dir}/Manifest"
                 rm "/tmp/${fn}"
