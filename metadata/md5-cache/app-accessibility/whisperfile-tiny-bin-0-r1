@@ -7,4 +7,4 @@ KEYWORDS=~amd64
 LICENSE=Apache 2.0
 SLOT=0
 SRC_URI=amd64? ( full? ( https://huggingface.co/cjpais/whisperfile/resolve/main/whisper.tiny.llamafile?download=true -> whisperfile-tiny-bin-0.amd64 ) q5k? ( https://huggingface.co/cjpais/whisperfile/resolve/main/whisper.tiny.q5k.llamafile?download=true -> whisperfile-tiny-bin-0.q5k.amd64 ) q8? ( https://huggingface.co/cjpais/whisperfile/resolve/main/whisper.tiny.q8.llamafile?download=true -> whisperfile-tiny-bin-0.q8.amd64 ) )
-_md5_=73422470325acb0efa91cdebfd2849e1
+_md5_=02f49ce023ea9fe9159bdde53ba0f1e5
