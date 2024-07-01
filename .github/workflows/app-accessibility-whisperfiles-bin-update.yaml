@@ -94,7 +94,7 @@ jobs:
                 echo "LICENSE=\"${{ env.license }}\""
                 echo "SLOT=\"0\""
                 echo 'KEYWORDS="~amd64"'
-                echo 'RDEPEND=""'
+                echo 'RDEPEND="acct-group/whisperfile acct-user/whisperfile"'
                 echo 'DEPEND="${RDEPEND}"'
                 echo "S=\"\${WORKDIR}\""
                 echo ""
@@ -109,8 +109,8 @@ jobs:
                     condition="${variant}"
                   fi
                   echo "    if use $condition; then"
-                  echo "      mv \"$mvafn\" '$mvfn' || die 'failed to move $mvfn'"
-                  echo "      chmod +x '$mvfn' || die 'failed to chmod $mvfn'"
+                  echo "      cp \"${DISTDIR}/${mvafn}\" '$mvfn' || die 'failed to move $mvfn'"
+                  echo "      chmod +x '${mvfn}' || die 'failed to chmod $mvfn'"
                   echo "    fi"
                 done
                 echo "}"
@@ -131,6 +131,7 @@ jobs:
                 echo "}"
                 echo ""
                 echo "pkg_postinst() {"
+                  echo "    einfo \"Quick guide:\""
                 for variant in ${grouped[$model]}; do
                   mvfn="whisper.${model}.llamafile"
                   condition=full
@@ -138,7 +139,6 @@ jobs:
                     mvfn="whisper.${model}.${variant}.llamafile"
                     condition="${variant}"
                   fi
-                  echo "    einfo \"Quick guide:\""
                   echo "    if use $condition; then"
                   echo "      doexe \"\${WORKDIR}/${mvfn}\""
                   echo "      einfo \"${mvfn} --host 0.0.0.0 --port 51524 --convert -pc -pr -pp\""
@@ -164,8 +164,8 @@ jobs:
                   echo "      einfo \"Making service user-startable...\""
                   echo '      mkdir -p /etc/systemd/user'
                   echo "      ln -s /etc/systemd/system/${mvfn}.service /etc/systemd/user/${mvfn}.service"
+                  echo "      fi"
                   echo "    fi"
-                  echo "  fi"
                 done
                 echo "}"
                 echo ""

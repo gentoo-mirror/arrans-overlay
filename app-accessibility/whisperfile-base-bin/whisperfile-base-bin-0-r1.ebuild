@@ -11,21 +11,21 @@ SRC_URI="amd64? (
 LICENSE="Apache 2.0"
 SLOT="0"
 KEYWORDS="~amd64"
-RDEPEND=""
+RDEPEND="acct-group/whisperfile acct-user/whisperfile"
 DEPEND="${RDEPEND}"
 S="${WORKDIR}"
 
 src_unpack() {
     if use full; then
-      mv "${P}.amd64" 'whisper.base.llamafile' || die 'failed to move whisper.base.llamafile'
+      cp "/${P}.amd64" 'whisper.base.llamafile' || die 'failed to move whisper.base.llamafile'
       chmod +x 'whisper.base.llamafile' || die 'failed to chmod whisper.base.llamafile'
     fi
     if use q5k; then
-      mv "${P}.${variant}.amd64" 'whisper.base.q5k.llamafile' || die 'failed to move whisper.base.q5k.llamafile'
+      cp "/${P}.${variant}.amd64" 'whisper.base.q5k.llamafile' || die 'failed to move whisper.base.q5k.llamafile'
       chmod +x 'whisper.base.q5k.llamafile' || die 'failed to chmod whisper.base.q5k.llamafile'
     fi
     if use q8; then
-      mv "${P}.${variant}.amd64" 'whisper.base.q8.llamafile' || die 'failed to move whisper.base.q8.llamafile'
+      cp "/${P}.${variant}.amd64" 'whisper.base.q8.llamafile' || die 'failed to move whisper.base.q8.llamafile'
       chmod +x 'whisper.base.q8.llamafile' || die 'failed to chmod whisper.base.q8.llamafile'
     fi
 }
@@ -70,8 +70,8 @@ pkg_postinst() {
       einfo "Making service user-startable..."
       mkdir -p /etc/systemd/user
       ln -s /etc/systemd/system/whisper.base.llamafile.service /etc/systemd/user/whisper.base.llamafile.service
+      fi
     fi
-  fi
     einfo "Quick guide:"
     if use q5k; then
       doexe "${WORKDIR}/whisper.base.q5k.llamafile"
@@ -98,8 +98,8 @@ pkg_postinst() {
       einfo "Making service user-startable..."
       mkdir -p /etc/systemd/user
       ln -s /etc/systemd/system/whisper.base.q5k.llamafile.service /etc/systemd/user/whisper.base.q5k.llamafile.service
+      fi
     fi
-  fi
     einfo "Quick guide:"
     if use q8; then
       doexe "${WORKDIR}/whisper.base.q8.llamafile"
@@ -126,7 +126,7 @@ pkg_postinst() {
       einfo "Making service user-startable..."
       mkdir -p /etc/systemd/user
       ln -s /etc/systemd/system/whisper.base.q8.llamafile.service /etc/systemd/user/whisper.base.q8.llamafile.service
+      fi
     fi
-  fi
 }
 
