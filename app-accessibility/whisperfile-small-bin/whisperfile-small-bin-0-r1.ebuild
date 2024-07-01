@@ -17,15 +17,15 @@ S="${WORKDIR}"
 
 src_unpack() {
     if use full; then
-      cp "/${P}.amd64" 'whisper.small.llamafile' || die 'failed to move whisper.small.llamafile'
+      cp "${DISTDIR}/${P}.amd64" 'whisper.small.llamafile' || die 'failed to move whisper.small.llamafile'
       chmod +x 'whisper.small.llamafile' || die 'failed to chmod whisper.small.llamafile'
     fi
     if use q5k; then
-      cp "/${P}.${variant}.amd64" 'whisper.small.q5k.llamafile' || die 'failed to move whisper.small.q5k.llamafile'
+      cp "${DISTDIR}/${P}.${variant}.amd64" 'whisper.small.q5k.llamafile' || die 'failed to move whisper.small.q5k.llamafile'
       chmod +x 'whisper.small.q5k.llamafile' || die 'failed to chmod whisper.small.q5k.llamafile'
     fi
     if use q8; then
-      cp "/${P}.${variant}.amd64" 'whisper.small.q8.llamafile' || die 'failed to move whisper.small.q8.llamafile'
+      cp "${DISTDIR}/${P}.${variant}.amd64" 'whisper.small.q8.llamafile' || die 'failed to move whisper.small.q8.llamafile'
       chmod +x 'whisper.small.q8.llamafile' || die 'failed to chmod whisper.small.q8.llamafile'
     fi
 }
