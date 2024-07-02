@@ -1,5 +1,7 @@
+acct-group/llamafile 0-r1: System group: llamafile
 acct-group/ollama 0-r1: System group: ollama
 acct-group/whisperfile 0-r1: System group: whisperfile
+acct-user/llamafile 0-r1: System user for llamafile
 acct-user/ollama 0-r1: System user for ollama
 acct-user/whisperfile 0-r1: System user for whisperfile
 app-accessibility/whisperfile-base-bin 0-r1: Run whisper speach recognition base LLM in a single binary executable using llamafile.
