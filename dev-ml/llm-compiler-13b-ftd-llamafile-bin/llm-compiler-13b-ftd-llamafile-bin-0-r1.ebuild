@@ -17,15 +17,15 @@ S="${WORKDIR}"
 
 src_unpack() {
     if use bf16; then
-      cp "${DISTDIR}/${P}.${variant}.amd64" 'llm-compiler-13b-ftd-BF16.llamafile' || die 'failed to move llm-compiler-13b-ftd-BF16.llamafile'
+      cp "${DISTDIR}/${P}.BF16.amd64" 'llm-compiler-13b-ftd-BF16.llamafile' || die 'failed to move llm-compiler-13b-ftd-BF16.llamafile'
       chmod +x 'llm-compiler-13b-ftd-BF16.llamafile' || die 'failed to chmod llm-compiler-13b-ftd-BF16.llamafile'
     fi
     if use f16; then
-      cp "${DISTDIR}/${P}.${variant}.amd64" 'llm-compiler-13b-ftd-F16.llamafile' || die 'failed to move llm-compiler-13b-ftd-F16.llamafile'
+      cp "${DISTDIR}/${P}.F16.amd64" 'llm-compiler-13b-ftd-F16.llamafile' || die 'failed to move llm-compiler-13b-ftd-F16.llamafile'
       chmod +x 'llm-compiler-13b-ftd-F16.llamafile' || die 'failed to chmod llm-compiler-13b-ftd-F16.llamafile'
     fi
     if use q6_k; then
-      cp "${DISTDIR}/${P}.${variant}.amd64" 'llm-compiler-13b-ftd-Q6_K.llamafile' || die 'failed to move llm-compiler-13b-ftd-Q6_K.llamafile'
+      cp "${DISTDIR}/${P}.Q6_K.amd64" 'llm-compiler-13b-ftd-Q6_K.llamafile' || die 'failed to move llm-compiler-13b-ftd-Q6_K.llamafile'
       chmod +x 'llm-compiler-13b-ftd-Q6_K.llamafile' || die 'failed to chmod llm-compiler-13b-ftd-Q6_K.llamafile'
     fi
 }
