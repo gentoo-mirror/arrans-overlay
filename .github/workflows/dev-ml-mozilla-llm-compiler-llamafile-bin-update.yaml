@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/dev-ml-mozilla-llm-compiler-llamafile-bin-update'
+      - '.github/workflows/dev-ml-mozilla-llm-compiler-llamafile-bin-update.yaml'
 
 concurrency:
   group: ci-${{ github.ref }}
@@ -43,7 +43,9 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y wget jq coreutils
-          wget "$(curl https://api.github.com/repos/arran4/g2/releases/latest | jq -r '.assets[].browser_download_url | select(endswith("_linux_amd64.deb"))')" -o /tmp/g2.deb
+          url="$(curl https://api.github.com/repos/arran4/g2/releases/latest | jq -r '.assets[].browser_download_url | select(endswith("_linux_amd64.deb"))')"
+          echo "$url"
+          wget "${url}" -O /tmp/g2.deb
           sudo dpkg -i /tmp/g2.deb
           rm /tmp/g2.deb
 
@@ -151,7 +153,13 @@ jobs:
               
               # Generate the manifest for the new ebuild
               for variant in ${grouped[$model]}; do
-                g2 manifest upsert-from-url "$url" "fn" "${ebuild_dir}/Manifest"
+                url="https://huggingface.co/${{env.huggingface_owner}}/${{env.huggingface_repo}}/resolve/${{env.huggingface_repo_branch}}/${model}.llamafile?download=true"
+                fn="${ebuild_name}-${version}.amd64"
+                if [ "${variant}" != "full" ]; then
+                  url="https://huggingface.co/${{env.huggingface_owner}}/${{env.huggingface_repo}}/resolve/${{env.huggingface_repo_branch}}/${model}.${variant}.llamafile?download=true"
+                  fn="${ebuild_name}-${version}.${variant}.amd64"
+                fi
+                g2 manifest upsert-from-url "$url" "$fn" "${ebuild_dir}/Manifest"
               done
             fi
           done
