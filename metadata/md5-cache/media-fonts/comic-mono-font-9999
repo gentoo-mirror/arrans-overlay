@@ -1,0 +1,14 @@
+BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup
+DESCRIPTION=A legible monospace font... the very typeface you’ve been trained to recognize since childhood.
+EAPI=8
+HOMEPAGE=https://github.com/dtinth/comic-mono-font/
+INHERIT=font
+IUSE=X
+KEYWORDS=amd64 arm arm64 ~loong ~ppc64 ~riscv x86
+LICENSE=MIT License
+RESTRICT=binchecks strip
+SLOT=0
+SRC_URI=https://github.com/dtinth/comic-mono-font/archive/refs/heads/master.zip -> 9999.zip
+_eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb
+_md5_=6fdb139ee060f5385af8f0121e8970a9
