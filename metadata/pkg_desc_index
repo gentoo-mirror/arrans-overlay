@@ -18,7 +18,7 @@ app-misc/ente-auth-appimage 3.0.17 3.0.18_beta1: Ente Auth AppImage
 app-misc/flutter-google-datastore-appimage 0.1.5: Google Datastore and Datastore emulator client for easy modification of values
 app-misc/jan-appimage 0.4.12 0.4.13 0.4.14 0.5.0 0.5.1: Jan is an open source alternative to ChatGPT that runs 100% offline on your computer. Multiple engine support (llama.cpp, TensorRT-LLM)
 app-misc/lemmy_notify-appimage 0.0.4: Lemmy Notification app - for desktop atm
-app-misc/stability-matrix-appimage 2.11.3: Multi-Platform Package Manager for Stable Diffusion
+app-misc/stability-matrix-appimage 2.11.3 2.11.4: Multi-Platform Package Manager for Stable Diffusion
 app-text/jbofihe 0.43: The de facto standard parser and glosser for Lojban.
 dev-go/goreleaser-bin 2.0.1: Deliver Go binaries as fast and easily as possible.
 dev-lang/dart-bin 3.4.4: The Dart SDK, including the VM, dart2js, core libraries, and more.
