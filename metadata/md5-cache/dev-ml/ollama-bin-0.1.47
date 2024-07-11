@@ -12,4 +12,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=amd64? ( https://github.com/ollama/ollama/releases/download/v0.1.47/ollama-linux-amd64 -> ollama-bin-0.1.47.amd64 ) arm64? ( https://github.com/ollama/ollama/releases/download/v0.1.47/ollama-linux-arm64 -> ollama-bin-0.1.47.arm64 ) rocm? ( https://github.com/ollama/ollama/releases/download/v0.1.47/ollama-linux-amd64-rocm.tgz -> ollama-bin-0.1.47.rocm.tgz )
 _eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3
-_md5_=7d5351b272ffd31ab9920f7c894b5438
+_md5_=0296e560e5af3e542c4d4c9d5761e7b2
