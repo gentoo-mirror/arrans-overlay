@@ -1,4 +1,4 @@
-# Generated via: https://github.com/arran4/arrans_overlay/blob/main/.github/workflows/app-misc-local.ai-appimage-update.yaml
+# Generated via: https://github.com/arran4/arrans_overlay/blob/main/.github/workflows/app-misc-local-ai-appimage-update.yaml
 EAPI=8
 DESCRIPTION="🎒 local.ai - Run AI locally on your PC!"
 HOMEPAGE="https://localai.app"
