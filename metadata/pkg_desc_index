@@ -30,6 +30,7 @@ dev-ml/llm-compiler-13b-ftd-llamafile-bin 0-r1: LLM Compiler llm-compiler-13b-ft
 dev-ml/moondream2llamafile-bin 0-r1: Run moondream2, a small vision language model designed to run efficiently on edge devices, in a single binary executable using llamafile.
 dev-ml/ollama-bin 0.1.47 0.1.48 0.2.0 0.2.1 0.2.2 0.2.5: Get up and running with Llama 3, Mistral, Gemma, and other large language models.
 dev-ml/whisperfile-bin 0.1.1 0.1.2: Distribute and run whisper LLMs with a single file.
+dev-util/im-hex-appimage 1.35.4: 🔍 A Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM.
 kde-misc/arrans-kde-keyboard-shortcuts-with-meta 1.0.1: My keyboard bindings fast select.
 media-fonts/comic-mono-font 9999: A legible monospace font... the very typeface you’ve been trained to recognize since childhood.
 media-fonts/llamattf 9999: A font containing a large language model and inference engine.
