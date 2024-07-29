@@ -22,7 +22,7 @@ app-misc/jan-appimage 0.4.12 0.4.13 0.4.14 0.5.0 0.5.1 0.5.2: Jan is an open sou
 app-misc/lemmy_notify-appimage 0.0.4: Lemmy Notification app - for desktop atm
 app-misc/local-ai-appimage 0.6.6: 🎒 local.ai - Run AI locally on your PC!
 app-misc/maid-appimage 1.2.9: Maid is a cross-platform Flutter app for interfacing with GGUF / llama.cpp models locally, and with Ollama and OpenAI models remotely.
-app-misc/stability-matrix-appimage 2.11.3 2.11.4: Multi-Platform Package Manager for Stable Diffusion
+app-misc/stability-matrix-appimage 2.11.3 2.11.4 2.11.5: Multi-Platform Package Manager for Stable Diffusion
 app-text/anytype-ts-appimage 0.41.1 0.41.34_alpha 0.41.37_alpha 0.41.39_beta: Official Anytype client for MacOS, Linux, and Windows
 app-text/jbofihe 0.43: The de facto standard parser and glosser for Lojban.
 dev-go/goreleaser-bin 2.0.1 2.1.0: Deliver Go binaries as fast and easily as possible.
