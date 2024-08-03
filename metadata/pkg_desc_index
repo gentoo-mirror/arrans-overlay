@@ -43,5 +43,5 @@ net-im/caprine-appimage 2.59.2 2.59.3 2.60.1: Elegant Facebook Messenger desktop
 net-im/slackdump-bin 2.5.8 2.5.9: Save or export your private and public Slack messages, threads, files, and users locally without admin privileges.
 net-misc/localsend-appimage 1.14.0 1.15.0 1.15.1 1.15.2 1.15.3: An open-source cross-platform alternative to AirDrop
 net-misc/rustdesk-appimage 1.2.6 1.2.7: An open-source remote desktop, and alternative to TeamViewer.
-www-apps/hugo-bin 0.127.0 0.128.0 0.128.1 0.128.2 0.129.0 0.130.0: The world’s fastest framework for building websites.
+www-apps/hugo-bin 0.127.0 0.128.0 0.128.1 0.128.2 0.129.0 0.130.0 0.131.0: The world’s fastest framework for building websites.
 www-misc/which_browser 0.1.4: Which Browser? A browser selecting tool with rules to automate.
