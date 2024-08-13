@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst prepare unpack
+DESCRIPTION=Ente's 2FA solution
+EAPI=8
+HOMEPAGE=https://ente.io
+INHERIT=xdg-utils
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=sys-libs/glibc sys-libs/zlib
+RESTRICT=strip
+SLOT=0
+SRC_URI=amd64? ( https://github.com/ente-io/ente/releases/download/auth-v3.1.1/ente-auth-v3.1.1-x86_64.AppImage -> ente-auth-appimage-3.1.1-ente-auth-v3.1.1-x86_64.AppImage )
+_eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3
+_md5_=cbd1b903d46cc0e14de728061cc48224
