@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst prepare unpack
+DESCRIPTION=Multi-Platform Package Manager for Stable Diffusion
+EAPI=8
+HOMEPAGE=https://lykos.ai
+INHERIT=xdg-utils
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=sys-libs/glibc sys-libs/zlib
+RESTRICT=strip
+SLOT=0
+SRC_URI=amd64? ( https://github.com/LykosAI/StabilityMatrix/releases/download/v2.11.7/StabilityMatrix-linux-x64.zip -> stability-matrix-appimage-2.11.7-StabilityMatrix-linux-x64.zip )
+_eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3
+_md5_=7cf19ce1e7b8464812cf807cc9eef14f
