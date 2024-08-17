@@ -29,7 +29,7 @@ app-misc/superfile-bin 1.1.4: Pretty fancy and modern terminal file manager
 app-text/anytype-ts-appimage 0.41.0 0.41.1 0.41.34_alpha 0.41.37_alpha 0.41.39_beta 0.41.40_beta 0.41.42_beta 0.41.47_beta 0.42.0 0.42.1_alpha 0.42.2_beta 0.42.3 0.42.4_alpha 0.42.4 0.42.5_alpha 0.42.7_alpha 0.42.8_alpha 0.42.9_alpha: Official Anytype client for MacOS, Linux, and Windows
 app-text/jbofihe 0.43: The de facto standard parser and glosser for Lojban.
 dev-go/goreleaser-bin 2.0.1 2.1.0 2.2.0: Deliver Go binaries as fast and easily as possible
-dev-lang/dart-bin 3.4.4 3.5.0: The Dart SDK, including the VM, dart2js, core libraries, and more.
+dev-lang/dart-bin 3.4.4 3.5.0 3.5.1: The Dart SDK, including the VM, dart2js, core libraries, and more.
 dev-lang/flutter-bin 3.22.2 3.22.3 3.24.0: Flutter makes it easy and fast to build beautiful apps for mobile and beyond
 dev-ml/llamafile-bin 0.8.8 0.8.9 0.8.11 0.8.12: Distribute and run LLMs with a single file.
 dev-ml/llm-compiler-13b-ftd-llamafile-bin 0-r1: LLM Compiler llm-compiler-13b-ftd is a large language model that's been trained to know how to read/write AT&T style assembly, LLVM IR, and C code. It's able to replicate the functionality of the clang compiler.
