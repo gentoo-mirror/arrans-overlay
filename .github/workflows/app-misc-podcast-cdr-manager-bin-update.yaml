@@ -1,38 +1,38 @@
 # Generated using: https://github.com/arran4/arrans_overlay_workflow_builder dev Github Binary Release /home/arran/Documents/Projects/arrans_overlay/current.config 2024-08-17 19:18:52.200460126 +1000 AEST m=+0.001585036
 
-name: app-admin/g2-bin update
+name: app-misc/podcast-cdr-manager-bin update
 
 permissions:
   contents: write
 
 on:
   schedule:
-    - cron: '33 2 * * *'
+    - cron: '24 7 * * *'
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/app-admin-g2-bin-update.yaml'
+      - '.github/workflows/app-misc-podcast-cdr-manager-bin-update.yaml'
 
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: false
 
 env:
-  ecn: app-admin
-  epn: g2-bin
-  description: "g2 Gentoo Tools"
-  homepage: "https://wiki.gentoo.org/wiki/User:Arran4"
+  ecn: app-misc
+  epn: podcast-cdr-manager-bin
+  description: "CLI tool to help manage podcast subscriptions for burning to CDROMs / CDR / CDRW"
+  homepage: ""
   github_owner: arran4
-  github_repo: g2
+  github_repo: podcast-cdr-manager
   keywords: ~amd64 ~arm ~arm64
-  workflow_filename: app-admin-g2-bin-update.yaml
-  binary_installed_name: 'g2'
-  binary_archived_name_amd64: 'g2'
-  release_name_amd64: 'g2_\${PV}_linux_amd64.tar.gz'
-  binary_archived_name_arm: 'g2'
-  release_name_arm: 'g2_\${PV}_linux_armv6.tar.gz'
-  binary_archived_name_arm64: 'g2'
-  release_name_arm64: 'g2_\${PV}_linux_arm64.tar.gz'
+  workflow_filename: app-misc-podcast-cdr-manager-bin-update.yaml
+  podcastcdrmanager_binary_installed_name: 'podcastcdrmanager'
+  podcastcdrmanager_binary_archived_name_amd64: 'podcastcdrmanager'
+  podcastcdrmanager_release_name_amd64: 'podcastcdrmanager_Linux_x86_64.tar.gz'
+  podcastcdrmanager_binary_archived_name_arm: 'podcastcdrmanager'
+  podcastcdrmanager_release_name_arm: 'podcastcdrmanager_Linux_armv6.tar.gz'
+  podcastcdrmanager_binary_archived_name_arm64: 'podcastcdrmanager'
+  podcastcdrmanager_release_name_arm64: 'podcastcdrmanager_Linux_arm64.tar.gz'
 
 jobs:
   check-and-create-ebuild:
@@ -96,7 +96,7 @@ jobs:
                 echo 'LICENSE="MIT"'
                 echo 'SLOT="0"'
                 echo 'KEYWORDS="${{ env.keywords }}"'
-                echo 'IUSE=""'
+                echo 'IUSE=" doc"'
                 echo 'REQUIRED_USE=""'
                 echo 'DEPEND=""'
                 echo 'RDEPEND=""'
@@ -104,33 +104,36 @@ jobs:
                 echo ''
                 echo ''
                 echo 'SRC_URI="'
-                echo "  amd64? (  https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/g2_\${PV}_linux_amd64.tar.gz -> \${P}-g2_\${PV}_linux_amd64.tar.gz  )  "
-                echo "  arm? (  https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/g2_\${PV}_linux_armv6.tar.gz -> \${P}-g2_\${PV}_linux_armv6.tar.gz  )  "
-                echo "  arm64? (  https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/g2_\${PV}_linux_arm64.tar.gz -> \${P}-g2_\${PV}_linux_arm64.tar.gz  )  "
+                echo "  amd64? (  https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/podcastcdrmanager_Linux_x86_64.tar.gz -> \${P}-podcastcdrmanager_Linux_x86_64.tar.gz  )  "
+                echo "  arm? (  https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/podcastcdrmanager_Linux_armv6.tar.gz -> \${P}-podcastcdrmanager_Linux_armv6.tar.gz  )  "
+                echo "  arm64? (  https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/podcastcdrmanager_Linux_arm64.tar.gz -> \${P}-podcastcdrmanager_Linux_arm64.tar.gz  )  "
                 echo '"'
                 echo ''
                 echo 'src_unpack() {'
                 echo '  if use amd64; then'
-                echo "    unpack \"\${DISTDIR}/\${P}-g2_\${PV}_linux_amd64.tar.gz\" || die \"Can't unpack archive file\""
+                echo "    unpack \"\${DISTDIR}/\${P}-podcastcdrmanager_Linux_x86_64.tar.gz\" || die \"Can't unpack archive file\""
                 echo '  fi'
                 echo '  if use arm; then'
-                echo "    unpack \"\${DISTDIR}/\${P}-g2_\${PV}_linux_armv6.tar.gz\" || die \"Can't unpack archive file\""
+                echo "    unpack \"\${DISTDIR}/\${P}-podcastcdrmanager_Linux_armv6.tar.gz\" || die \"Can't unpack archive file\""
                 echo '  fi'
                 echo '  if use arm64; then'
-                echo "    unpack \"\${DISTDIR}/\${P}-g2_\${PV}_linux_arm64.tar.gz\" || die \"Can't unpack archive file\""
+                echo "    unpack \"\${DISTDIR}/\${P}-podcastcdrmanager_Linux_arm64.tar.gz\" || die \"Can't unpack archive file\""
                 echo '  fi'
                 echo '}'
                 echo ''
                 echo 'src_install() {'
                 echo '  exeinto /opt/bin'
                 echo '  if use amd64; then'
-                echo '    newexe "${{ env.binary_archived_name_amd64 }}" "${{ env.binary_installed_name }}" || die "Failed to install Binary"'
+                echo '    newexe "${{ env.podcastcdrmanager_binary_archived_name_amd64 }}" "${{ env.podcastcdrmanager_binary_installed_name }}" || die "Failed to install Binary"'
                 echo '  fi'
                 echo '  if use arm; then'
-                echo '    newexe "${{ env.binary_archived_name_arm }}" "${{ env.binary_installed_name }}" || die "Failed to install Binary"'
+                echo '    newexe "${{ env.podcastcdrmanager_binary_archived_name_arm }}" "${{ env.podcastcdrmanager_binary_installed_name }}" || die "Failed to install Binary"'
                 echo '  fi'
                 echo '  if use arm64; then'
-                echo '    newexe "${{ env.binary_archived_name_arm64 }}" "${{ env.binary_installed_name }}" || die "Failed to install Binary"'
+                echo '    newexe "${{ env.podcastcdrmanager_binary_archived_name_arm64 }}" "${{ env.podcastcdrmanager_binary_installed_name }}" || die "Failed to install Binary"'
+                echo '  fi'
+                echo '  if use doc; then'
+                echo '    newdoc "readme.md" "readme.md" || die "Failed to install document readme.md"'
                 echo '  fi'
                 echo '}'
                 echo ""
@@ -138,9 +141,9 @@ jobs:
 
               # Manifest generation
 
-              g2 manifest upsert-from-url "https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/g2_${version}_linux_amd64.tar.gz" "${{ env.epn }}-${version}-g2_${version}_linux_amd64.tar.gz" "${ebuild_dir}/Manifest"
-              g2 manifest upsert-from-url "https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/g2_${version}_linux_armv6.tar.gz" "${{ env.epn }}-${version}-g2_${version}_linux_armv6.tar.gz" "${ebuild_dir}/Manifest"
-              g2 manifest upsert-from-url "https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/g2_${version}_linux_arm64.tar.gz" "${{ env.epn }}-${version}-g2_${version}_linux_arm64.tar.gz" "${ebuild_dir}/Manifest"
+              g2 manifest upsert-from-url "https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/podcastcdrmanager_Linux_x86_64.tar.gz" "${{ env.epn }}-${version}-podcastcdrmanager_Linux_x86_64.tar.gz" "${ebuild_dir}/Manifest"
+              g2 manifest upsert-from-url "https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/podcastcdrmanager_Linux_armv6.tar.gz" "${{ env.epn }}-${version}-podcastcdrmanager_Linux_armv6.tar.gz" "${ebuild_dir}/Manifest"
+              g2 manifest upsert-from-url "https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/podcastcdrmanager_Linux_arm64.tar.gz" "${{ env.epn }}-${version}-podcastcdrmanager_Linux_arm64.tar.gz" "${ebuild_dir}/Manifest"
               echo "generated_tag=${tag}" >> $GITHUB_OUTPUT
             fi
           done

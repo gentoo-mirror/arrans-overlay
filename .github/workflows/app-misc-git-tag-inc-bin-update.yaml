@@ -1,17 +1,17 @@
-# Generated using: https://github.com/arran4/arrans_overlay_workflow_builder Github Binary Release /home/arran/Documents/Projects/arrans_overlay/current.config 2024-08-15 17:01:17.940436333 +1000 AEST m=+0.001599639
+# Generated using: https://github.com/arran4/arrans_overlay_workflow_builder dev Github Binary Release /home/arran/Documents/Projects/arrans_overlay/current.config 2024-08-17 19:16:30.526012557 +1000 AEST m=+0.002233502
 
-name: app-misc/arrans-overlay-workflow-builder-bin update
+name: app-misc/git-tag-inc-bin update
 
 permissions:
   contents: write
 
 on:
   schedule:
-    - cron: '36 7 * * *'
+    - cron: '24 17 * * *'
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/app-misc-arrans-overlay-workflow-builder-bin-update.yaml'
+      - '.github/workflows/app-misc-git-tag-inc-bin-update.yaml'
 
 concurrency:
   group: ci-${{ github.ref }}
@@ -19,16 +19,20 @@ concurrency:
 
 env:
   ecn: app-misc
-  epn: arrans-overlay-workflow-builder-bin
-  description: "TODO"
+  epn: git-tag-inc-bin
+  description: "Yet another semantic version incrementor and tagger for git"
   homepage: ""
   github_owner: arran4
-  github_repo: arrans_overlay_workflow_builder
-  keywords: ~amd64
-  workflow_filename: app-misc-arrans-overlay-workflow-builder-bin-update.yaml
-  arrans_overlay_workflow_builder_binary_installed_name: 'overlay_workflow_builder_generator'
-  arrans_overlay_workflow_builder_binary_archived_name_amd64: 'overlay_workflow_builder_generator'
-  arrans_overlay_workflow_builder_release_name_amd64: 'arrans_overlay_workflow_builder_\${PV}_linux_amd64.tar.gz'
+  github_repo: git-tag-inc
+  keywords: ~amd64 ~arm ~arm64
+  workflow_filename: app-misc-git-tag-inc-bin-update.yaml
+  git-tag-inc_binary_installed_name: 'git-tag-inc'
+  git-tag-inc_binary_archived_name_amd64: 'git-tag-inc'
+  git-tag-inc_release_name_amd64: 'git-tag-inc_\${PV}_linux_amd64.tar.gz'
+  git-tag-inc_binary_archived_name_arm: 'git-tag-inc'
+  git-tag-inc_release_name_arm: 'git-tag-inc_\${PV}_linux_armv7.tar.gz'
+  git-tag-inc_binary_archived_name_arm64: 'git-tag-inc'
+  git-tag-inc_release_name_arm64: 'git-tag-inc_\${PV}_linux_arm64.tar.gz'
 
 jobs:
   check-and-create-ebuild:
@@ -95,27 +99,50 @@ jobs:
                 echo 'IUSE=" doc"'
                 echo 'REQUIRED_USE=""'
                 echo 'DEPEND=""'
-                echo 'RDEPEND="sys-libs/glibc "'
+                echo 'RDEPEND=""'
                 echo 'S="${WORKDIR}"'
                 echo ''
                 echo ''
                 echo 'SRC_URI="'
-                echo "  amd64? (  https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/arrans_overlay_workflow_builder_\${PV}_linux_amd64.tar.gz -> \${P}-arrans_overlay_workflow_builder_\${PV}_linux_amd64.tar.gz  )  "
+                echo "  amd64? (  https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/git-tag-inc_\${PV}_linux_amd64.tar.gz -> \${P}-git-tag-inc_\${PV}_linux_amd64.tar.gz  )  "
+                echo "  arm? (  https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/git-tag-inc_\${PV}_linux_armv7.tar.gz -> \${P}-git-tag-inc_\${PV}_linux_armv7.tar.gz  )  "
+                echo "  arm64? (  https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/git-tag-inc_\${PV}_linux_arm64.tar.gz -> \${P}-git-tag-inc_\${PV}_linux_arm64.tar.gz  )  "
                 echo '"'
                 echo ''
                 echo 'src_unpack() {'
                 echo '  if use amd64; then'
-                echo "    unpack \"\${DISTDIR}/\${P}-arrans_overlay_workflow_builder_\${PV}_linux_amd64.tar.gz\" || die \"Can't unpack archive file\""
+                echo "    unpack \"\${DISTDIR}/\${P}-git-tag-inc_\${PV}_linux_amd64.tar.gz\" || die \"Can't unpack archive file\""
+                echo '  fi'
+                echo '  if use arm; then'
+                echo "    unpack \"\${DISTDIR}/\${P}-git-tag-inc_\${PV}_linux_armv7.tar.gz\" || die \"Can't unpack archive file\""
+                echo '  fi'
+                echo '  if use arm64; then'
+                echo "    unpack \"\${DISTDIR}/\${P}-git-tag-inc_\${PV}_linux_arm64.tar.gz\" || die \"Can't unpack archive file\""
                 echo '  fi'
                 echo '}'
                 echo ''
                 echo 'src_install() {'
                 echo '  exeinto /opt/bin'
                 echo '  if use amd64; then'
-                echo '    newexe "${{ env.arrans_overlay_workflow_builder_binary_archived_name_amd64 }}" "${{ env.arrans_overlay_workflow_builder_binary_installed_name }}" || die "Failed to install Binary"'
+                echo '    newexe "${{ env.git-tag-inc_binary_archived_name_amd64 }}" "${{ env.git-tag-inc_binary_installed_name }}" || die "Failed to install Binary"'
+                echo '  fi'
+                echo '  if use arm; then'
+                echo '    newexe "${{ env.git-tag-inc_binary_archived_name_arm }}" "${{ env.git-tag-inc_binary_installed_name }}" || die "Failed to install Binary"'
+                echo '  fi'
+                echo '  if use arm64; then'
+                echo '    newexe "${{ env.git-tag-inc_binary_archived_name_arm64 }}" "${{ env.git-tag-inc_binary_installed_name }}" || die "Failed to install Binary"'
                 echo '  fi'
                 echo '  if use doc; then'
-                echo '    newdoc "readme.md" "readme.md" || die "Failed to install document readme.md"'
+                echo '    if use amd64; then'
+                echo '      newdoc "readme.md" "readme.md" || die "Failed to install document readme.md"'
+                echo '    fi'
+                echo '    if use arm; then'
+                echo '      newdoc "readme.md" "readme.md" || die "Failed to install document readme.md"'
+                echo '      newdoc "readme.md" "readme.md" || die "Failed to install document readme.md"'
+                echo '    fi'
+                echo '    if use arm64; then'
+                echo '      newdoc "readme.md" "readme.md" || die "Failed to install document readme.md"'
+                echo '    fi'
                 echo '  fi'
                 echo '}'
                 echo ""
@@ -123,7 +150,9 @@ jobs:
 
               # Manifest generation
 
-              g2 manifest upsert-from-url "https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/arrans_overlay_workflow_builder_${version}_linux_amd64.tar.gz" "${{ env.epn }}-${version}-arrans_overlay_workflow_builder_${version}_linux_amd64.tar.gz" "${ebuild_dir}/Manifest"
+              g2 manifest upsert-from-url "https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/git-tag-inc_${version}_linux_amd64.tar.gz" "${{ env.epn }}-${version}-git-tag-inc_${version}_linux_amd64.tar.gz" "${ebuild_dir}/Manifest"
+              g2 manifest upsert-from-url "https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/git-tag-inc_${version}_linux_armv7.tar.gz" "${{ env.epn }}-${version}-git-tag-inc_${version}_linux_armv7.tar.gz" "${ebuild_dir}/Manifest"
+              g2 manifest upsert-from-url "https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/git-tag-inc_${version}_linux_arm64.tar.gz" "${{ env.epn }}-${version}-git-tag-inc_${version}_linux_arm64.tar.gz" "${ebuild_dir}/Manifest"
               echo "generated_tag=${tag}" >> $GITHUB_OUTPUT
             fi
           done
