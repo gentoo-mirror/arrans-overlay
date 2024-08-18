@@ -1,17 +1,17 @@
 # Generated using: https://github.com/arran4/arrans_overlay_workflow_builder 0.1.10 Github Binary Release current.config 2024-08-19 00:13:48.967470266 +1000 AEST m=+0.001938198
 
-name: app-misc/podcast-cdr-manager-bin update
+name: app-misc/anytype-to-linkwarden-bin update
 
 permissions:
   contents: write
 
 on:
   schedule:
-    - cron: '24 7 * * *'
+    - cron: '6 12 * * *'
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/app-misc-podcast-cdr-manager-bin-update.yaml'
+      - '.github/workflows/app-misc-anytype-to-linkwarden-bin-update.yaml'
 
 concurrency:
   group: ci-${{ github.ref }}
@@ -19,20 +19,18 @@ concurrency:
 
 env:
   ecn: app-misc
-  epn: podcast-cdr-manager-bin
-  description: "CLI tool to help manage podcast subscriptions for burning to CDROMs / CDR / CDRW"
+  epn: anytype-to-linkwarden-bin
+  description: "TODO"
   homepage: ""
   github_owner: arran4
-  github_repo: podcast-cdr-manager
-  keywords: ~amd64 ~arm ~arm64
-  workflow_filename: app-misc-podcast-cdr-manager-bin-update.yaml
-  podcastcdrmanager_binary_installed_name: 'podcastcdrmanager'
-  podcastcdrmanager_binary_archived_name_amd64: 'podcastcdrmanager'
-  podcastcdrmanager_release_name_amd64: 'podcastcdrmanager_Linux_x86_64.tar.gz'
-  podcastcdrmanager_binary_archived_name_arm: 'podcastcdrmanager'
-  podcastcdrmanager_release_name_arm: 'podcastcdrmanager_Linux_armv6.tar.gz'
-  podcastcdrmanager_binary_archived_name_arm64: 'podcastcdrmanager'
-  podcastcdrmanager_release_name_arm64: 'podcastcdrmanager_Linux_arm64.tar.gz'
+  github_repo: anytype-to-linkwarden
+  keywords: ~amd64 ~arm64
+  workflow_filename: app-misc-anytype-to-linkwarden-bin-update.yaml
+  migrate-json-export_binary_installed_name: 'migrate-json-export'
+  migrate-json-export_binary_archived_name_amd64: 'migrate-json-export'
+  migrate-json-export_release_name_amd64: 'migrate-json-export_\${PV}_linux_amd64.tar.gz'
+  migrate-json-export_binary_archived_name_arm64: 'migrate-json-export'
+  migrate-json-export_release_name_arm64: 'migrate-json-export_\${PV}_linux_arm64.tar.gz'
 
 jobs:
   check-and-create-ebuild:
@@ -96,44 +94,43 @@ jobs:
                 echo 'LICENSE="MIT"'
                 echo 'SLOT="0"'
                 echo 'KEYWORDS="${{ env.keywords }}"'
-                echo 'IUSE=" doc"'
-                echo 'REQUIRED_USE=""'
+                echo 'IUSE=" migrate-json-export doc"'
+                echo 'REQUIRED_USE="migrate-json-export? ( || ( amd64  ) ) "'
                 echo 'DEPEND=""'
                 echo 'RDEPEND=""'
                 echo 'S="${WORKDIR}"'
                 echo ''
                 echo ''
                 echo 'SRC_URI="'
-                echo "  amd64? (  https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/podcastcdrmanager_Linux_x86_64.tar.gz -> \${P}-podcastcdrmanager_Linux_x86_64.tar.gz  )  "
-                echo "  arm? (  https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/podcastcdrmanager_Linux_armv6.tar.gz -> \${P}-podcastcdrmanager_Linux_armv6.tar.gz  )  "
-                echo "  arm64? (  https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/podcastcdrmanager_Linux_arm64.tar.gz -> \${P}-podcastcdrmanager_Linux_arm64.tar.gz  )  "
+                echo "  amd64? ( migrate-json-export? (  https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/migrate-json-export_\${PV}_linux_amd64.tar.gz -> \${P}-migrate-json-export_\${PV}_linux_amd64.tar.gz  )  )  "
+                echo "  arm64? (  https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/migrate-json-export_\${PV}_linux_arm64.tar.gz -> \${P}-migrate-json-export_\${PV}_linux_arm64.tar.gz  )  "
                 echo '"'
                 echo ''
                 echo 'src_unpack() {'
-                echo '  if use amd64; then'
-                echo "    unpack \"\${DISTDIR}/\${P}-podcastcdrmanager_Linux_x86_64.tar.gz\" || die \"Can't unpack archive file\""
-                echo '  fi'
-                echo '  if use arm; then'
-                echo "    unpack \"\${DISTDIR}/\${P}-podcastcdrmanager_Linux_armv6.tar.gz\" || die \"Can't unpack archive file\""
+                echo '  if use amd64 && use migrate-json-export; then'
+                echo "    unpack \"\${DISTDIR}/\${P}-migrate-json-export_\${PV}_linux_amd64.tar.gz\" || die \"Can't unpack archive file\""
                 echo '  fi'
                 echo '  if use arm64; then'
-                echo "    unpack \"\${DISTDIR}/\${P}-podcastcdrmanager_Linux_arm64.tar.gz\" || die \"Can't unpack archive file\""
+                echo "    unpack \"\${DISTDIR}/\${P}-migrate-json-export_\${PV}_linux_arm64.tar.gz\" || die \"Can't unpack archive file\""
                 echo '  fi'
                 echo '}'
                 echo ''
                 echo 'src_install() {'
                 echo '  exeinto /opt/bin'
-                echo '  if use amd64; then'
-                echo '    newexe "${{ env.podcastcdrmanager_binary_archived_name_amd64 }}" "${{ env.podcastcdrmanager_binary_installed_name }}" || die "Failed to install Binary"'
-                echo '  fi'
-                echo '  if use arm; then'
-                echo '    newexe "${{ env.podcastcdrmanager_binary_archived_name_arm }}" "${{ env.podcastcdrmanager_binary_installed_name }}" || die "Failed to install Binary"'
+                echo '  if use amd64 && use migrate-json-export; then'
+                echo '    newexe "${{ env.migrate-json-export_binary_archived_name_amd64 }}" "${{ env.migrate-json-export_binary_installed_name }}" || die "Failed to install Binary"'
                 echo '  fi'
                 echo '  if use arm64; then'
-                echo '    newexe "${{ env.podcastcdrmanager_binary_archived_name_arm64 }}" "${{ env.podcastcdrmanager_binary_installed_name }}" || die "Failed to install Binary"'
+                echo '    newexe "${{ env.migrate-json-export_binary_archived_name_arm64 }}" "${{ env.migrate-json-export_binary_installed_name }}" || die "Failed to install Binary"'
                 echo '  fi'
                 echo '  if use doc; then'
-                echo '    newdoc "readme.md" "readme.md" || die "Failed to install document readme.md"'
+                echo '    if use amd64; then'
+                echo '      newdoc "readme.md" "readme.md" || die "Failed to install document readme.md"'
+                echo '      newdoc "readme.md" "readme.md" || die "Failed to install document readme.md"'
+                echo '    fi'
+                echo '    if use arm64; then'
+                echo '      newdoc "readme.md" "readme.md" || die "Failed to install document readme.md"'
+                echo '    fi'
                 echo '  fi'
                 echo '}'
                 echo ""
@@ -141,9 +138,8 @@ jobs:
 
               # Manifest generation
 
-              g2 manifest upsert-from-url "https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/podcastcdrmanager_Linux_x86_64.tar.gz" "${{ env.epn }}-${version}-podcastcdrmanager_Linux_x86_64.tar.gz" "${ebuild_dir}/Manifest"
-              g2 manifest upsert-from-url "https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/podcastcdrmanager_Linux_armv6.tar.gz" "${{ env.epn }}-${version}-podcastcdrmanager_Linux_armv6.tar.gz" "${ebuild_dir}/Manifest"
-              g2 manifest upsert-from-url "https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/podcastcdrmanager_Linux_arm64.tar.gz" "${{ env.epn }}-${version}-podcastcdrmanager_Linux_arm64.tar.gz" "${ebuild_dir}/Manifest"
+              g2 manifest upsert-from-url "https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/migrate-json-export_${version}_linux_amd64.tar.gz" "${{ env.epn }}-${version}-migrate-json-export_${version}_linux_amd64.tar.gz" "${ebuild_dir}/Manifest"
+              g2 manifest upsert-from-url "https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/migrate-json-export_${version}_linux_arm64.tar.gz" "${{ env.epn }}-${version}-migrate-json-export_${version}_linux_arm64.tar.gz" "${ebuild_dir}/Manifest"
               echo "generated_tag=${tag}" >> $GITHUB_OUTPUT
             fi
           done
