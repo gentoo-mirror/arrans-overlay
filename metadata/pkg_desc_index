@@ -33,7 +33,7 @@ app-text/mostcomm-bin 1.2.0: A cli utility for finding the most common and sorti
 dev-go/goreleaser-bin 2.0.1 2.1.0 2.2.0: Deliver Go binaries as fast and easily as possible
 dev-lang/dart-bin 3.4.4 3.5.0 3.5.1: The Dart SDK, including the VM, dart2js, core libraries, and more.
 dev-lang/flutter-bin 3.22.2 3.22.3 3.24.0: Flutter makes it easy and fast to build beautiful apps for mobile and beyond
-dev-ml/llamafile-bin 0.8.8 0.8.9 0.8.11 0.8.12: Distribute and run LLMs with a single file.
+dev-ml/llamafile-bin 0.8.8 0.8.9 0.8.11 0.8.12 0.8.13: Distribute and run LLMs with a single file.
 dev-ml/llm-compiler-13b-ftd-llamafile-bin 0-r1: LLM Compiler llm-compiler-13b-ftd is a large language model that's been trained to know how to read/write AT&T style assembly, LLVM IR, and C code. It's able to replicate the functionality of the clang compiler.
 dev-ml/moondream2llamafile-bin 0-r1: Run moondream2, a small vision language model designed to run efficiently on edge devices, in a single binary executable using llamafile.
 dev-ml/ollama-bin 0.1.47 0.1.48 0.2.0 0.2.1 0.2.2 0.2.5 0.2.7 0.2.8 0.3.0 0.3.1 0.3.2 0.3.3 0.3.4 0.3.5 0.3.6: Get up and running with Llama 3, Mistral, Gemma, and other large language models.
