@@ -27,7 +27,7 @@ app-misc/maid-appimage 1.2.9 1.3.0 1.3.1: Maid is a cross-platform Flutter app f
 app-misc/podcast-cdr-manager-bin 0.0.2: CLI tool to help manage podcast subscriptions for burning to CDROMs / CDR / CDRW
 app-misc/stability-matrix-appimage 2.11.3 2.11.4 2.11.5 2.11.6 2.11.7 2.11.8: Multi-Platform Package Manager for Stable Diffusion
 app-misc/superfile-bin 1.1.4: Pretty fancy and modern terminal file manager
-app-text/anytype-ts-appimage 0.41.0 0.41.1 0.41.34_alpha 0.41.37_alpha 0.41.39_beta 0.41.40_beta 0.41.42_beta 0.41.47_beta 0.42.0 0.42.1_alpha 0.42.2_beta 0.42.3 0.42.4_alpha 0.42.4 0.42.5_alpha 0.42.7_alpha 0.42.8_alpha 0.42.9_alpha: Official Anytype client for MacOS, Linux, and Windows
+app-text/anytype-ts-appimage 0.41.0 0.41.1 0.41.34_alpha 0.41.37_alpha 0.41.39_beta 0.41.40_beta 0.41.42_beta 0.41.47_beta 0.42.0 0.42.1_alpha 0.42.2_beta 0.42.3 0.42.4_alpha 0.42.4 0.42.5_alpha 0.42.7_alpha 0.42.8_alpha 0.42.9_alpha 0.42.10_alpha: Official Anytype client for MacOS, Linux, and Windows
 app-text/jbofihe 0.43: The de facto standard parser and glosser for Lojban.
 app-text/mostcomm-bin 1.2.0: A cli utility for finding the most common and sorting by length, lines-sets in a text file
 dev-go/goreleaser-bin 2.0.1 2.1.0 2.2.0: Deliver Go binaries as fast and easily as possible
