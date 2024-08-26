@@ -45,8 +45,11 @@ dev-vcs/git-tag-inc-bin 1.1.3: Yet another semantic version incrementor and tagg
 kde-misc/arrans-kde-keyboard-shortcuts-with-meta 1.0.1: My keyboard bindings fast select.
 media-fonts/comic-mono-font 9999: A legible monospace font... the very typeface you’ve been trained to recognize since childhood.
 media-fonts/llamattf 9999: A font containing a large language model and inference engine.
+media-fonts/opendyslexic 0.91.12: OpenDyslexic, a typeface that uses typeface shapes & features to help offset some visual symptoms of Dyslexia. Now in SIL-OFL.
 media-fonts/times-new-bastard 1.0: It's Times New Roman but every seventh letter is jarringly sans serif
+media-fonts/tt2020 0.2.1: TT2020 is an advanced, open source, hyperrealistic, multilingual typewriter font for a new decade.
 media-fonts/victorian-modern-cursive-script 9999: Victorian Modern Cursive Script font - Handwriting Educational font
+media-fonts/virgil 9999: The font that powers Excalidraw
 media-video/vlc-xattrplaying_plugin 1.0.1: VLC plugin that adds 'seen' xattr tag to user.xdg.tags list when watching a video
 net-im/caprine-appimage 2.59.2 2.59.3 2.60.1: Elegant Facebook Messenger desktop app
 net-im/slackdump-bin 2.5.0_beta 2.5.8 2.5.9 2.5.10: Save or export your private and public Slack messages, threads, files, and users locally without admin privileges.
