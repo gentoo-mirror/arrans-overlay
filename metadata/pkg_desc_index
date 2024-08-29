@@ -17,12 +17,12 @@ app-emulation/86box-roms 4.1.1 4.2: ROMs for the 86Box emulator.
 app-misc/appimagetool-appimage 0.0.162 0.0.164: AppImage tool to create AppImages (As an AppImage)
 app-misc/chatbox-appimage 1.3.10: User-friendly Desktop Client App for AI Models/LLMs (GPT, Claude, Gemini, Ollama...)
 app-misc/dua-cli-bin 2.29.2: View disk space usage and delete unwanted data, fast.
-app-misc/ente-auth-appimage 2.0.56_beta 3.0.17 3.0.18_beta1 3.0.18_beta2 3.1.1 3.1.2_beta 3.1.3: Ente's 2FA solution
+app-misc/ente-auth-appimage 2.0.56_beta 3.0.17-r1 3.0.18_beta1-r1 3.0.18_beta2 3.1.1 3.1.2_beta 3.1.3: Ente's 2FA solution
 app-misc/flutter-google-datastore-appimage 0.1.5: Google Datastore and Datastore emulator client for easy modification of values
 app-misc/go-appimage-appimage 0.0.192 0.0.193 0.0.194: Go implementation of AppImage tools
 app-misc/jan-appimage 0.4.12 0.4.13 0.4.14 0.5.0 0.5.1 0.5.2: Jan is an open source alternative to ChatGPT that runs 100% offline on your computer. Multiple engine support (llama.cpp, TensorRT-LLM)
 app-misc/lemmy-notify-appimage 0.0.4: Lemmy Notification app - for desktop atm
-app-misc/lemmy_notify-appimage 0.0.4: Lemmy Notification app - for desktop atm
+app-misc/lemmy_notify-appimage 0.0.4-r1: Lemmy Notification app - for desktop atm
 app-misc/local-ai-appimage 0.6.6: 🎒 local.ai - Run AI locally on your PC!
 app-misc/maid-appimage 1.2.9 1.3.0 1.3.1: Maid is a cross-platform Flutter app for interfacing with GGUF / llama.cpp models locally, and with Ollama and OpenAI models remotely.
 app-misc/podcast-cdr-manager-bin 0.0.2: CLI tool to help manage podcast subscriptions for burning to CDROMs / CDR / CDRW
@@ -58,4 +58,4 @@ net-misc/pimtrace-bin 1.3.6: A CLI tool for preforming queries on ical and csv f
 net-misc/rustdesk-appimage 1.2.6 1.2.7 1.3.0: An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.
 www-apps/hugo-bin 0.127.0 0.128.0 0.128.1 0.128.2 0.129.0 0.130.0 0.131.0 0.132.0 0.132.1 0.132.2 0.133.0 0.133.1: The world’s fastest framework for building websites.
 www-apps/pagefind-bin 1.1.0: Static low-bandwidth search at scale
-www-misc/which_browser 0.1.4: Which Browser? A browser selecting tool with rules to automate.
+www-misc/which_browser 0.1.4-r1: Which Browser? A browser selecting tool with rules to automate.
