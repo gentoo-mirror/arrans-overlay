@@ -37,7 +37,7 @@ dev-lang/flutter-bin 3.22.2 3.22.3 3.24.0 3.24.1: Flutter makes it easy and fast
 dev-ml/llamafile-bin 0.8.8 0.8.9 0.8.11 0.8.12 0.8.13: Distribute and run LLMs with a single file.
 dev-ml/llm-compiler-13b-ftd-llamafile-bin 0-r1: LLM Compiler llm-compiler-13b-ftd is a large language model that's been trained to know how to read/write AT&T style assembly, LLVM IR, and C code. It's able to replicate the functionality of the clang compiler.
 dev-ml/moondream2llamafile-bin 0-r1: Run moondream2, a small vision language model designed to run efficiently on edge devices, in a single binary executable using llamafile.
-dev-ml/ollama-bin 0.1.47 0.1.48 0.2.0 0.2.1 0.2.2 0.2.5 0.2.7 0.2.8 0.3.0 0.3.1 0.3.2 0.3.3 0.3.4 0.3.5 0.3.6 0.3.7 0.3.8: Get up and running with Llama 3, Mistral, Gemma, and other large language models.
+dev-ml/ollama-bin 0.1.47 0.1.48 0.2.0 0.2.1 0.2.2 0.2.5 0.2.7 0.2.8 0.3.0 0.3.1 0.3.2 0.3.3 0.3.4 0.3.5 0.3.6 0.3.7 0.3.8 0.3.9: Get up and running with Llama 3, Mistral, Gemma, and other large language models.
 dev-ml/whisperfile-bin 0.1.1 0.1.2: Distribute and run whisper LLMs with a single file.
 dev-util/editorconfig-guesser-bin 1.0.0: Generates reasonable .editorconfig files for source files.
 dev-util/im-hex-appimage 1.35.4: 🔍 A Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM.
