@@ -18,7 +18,9 @@ SRC_URI="
 "
 
 src_unpack() {
-  cp "${DIST}/${P}-ente-auth-v3.1.3-x86_64.AppImage" ente_auth.AppImage
+  if use amd64; then
+    cp "${DISTDIR}/${P}-ente-auth-v3.1.3-x86_64.AppImage" "ente_auth.AppImage"  || die "Can't copy downloaded file"
+  fi
   chmod a+x "ente_auth.AppImage"  || die "Can't chmod archive file"
   "./ente_auth.AppImage" --appimage-extract "ente_auth.desktop" || die "Failed to extract .desktop from appimage"
   "./ente_auth.AppImage" --appimage-extract "usr/share/icons" || die "Failed to extract hicolor icons from app image"
