@@ -9,5 +9,5 @@ RDEPEND=sys-libs/glibc sys-libs/zlib
 RESTRICT=strip
 SLOT=0
 SRC_URI=amd64? ( https://github.com/anyproto/anytype-ts/releases/download/v0.42.9-alpha/Anytype-0.42.9-alpha.AppImage -> anytype-ts-appimage-0.42.9_alpha-Anytype-0.42.9_alpha.AppImage )
-_eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3
+_eclasses_=xdg-utils	5465aed08f1dfc2a75f14cbea4272961
 _md5_=941f2b8ae7fabeb472f44c02684c7dcc
