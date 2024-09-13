@@ -33,8 +33,8 @@ app-text/anytype-ts-appimage 0.41.0 0.41.1 0.41.34_alpha 0.41.37_alpha 0.41.39_b
 app-text/jbofihe 0.43: The de facto standard parser and glosser for Lojban.
 app-text/mostcomm-bin 1.2.0: A cli utility for finding the most common and sorting by length, lines-sets in a text file
 dev-go/goreleaser-bin 2.0.1 2.1.0 2.2.0: Deliver Go binaries as fast and easily as possible
-dev-lang/dart-bin 3.4.4 3.5.0 3.5.1 3.5.2: The Dart SDK, including the VM, dart2js, core libraries, and more.
-dev-lang/flutter-bin 3.22.2 3.22.3 3.24.0 3.24.1 3.24.2: Flutter makes it easy and fast to build beautiful apps for mobile and beyond
+dev-lang/dart-bin 3.4.4 3.5.0 3.5.1 3.5.2 3.5.3: The Dart SDK, including the VM, dart2js, core libraries, and more.
+dev-lang/flutter-bin 3.22.2 3.22.3 3.24.0 3.24.1 3.24.2 3.24.3: Flutter makes it easy and fast to build beautiful apps for mobile and beyond
 dev-ml/llamafile-bin 0.8.8 0.8.9 0.8.11 0.8.12 0.8.13: Distribute and run LLMs with a single file.
 dev-ml/llm-compiler-13b-ftd-llamafile-bin 0-r1: LLM Compiler llm-compiler-13b-ftd is a large language model that's been trained to know how to read/write AT&T style assembly, LLVM IR, and C code. It's able to replicate the functionality of the clang compiler.
 dev-ml/moondream2llamafile-bin 0-r1: Run moondream2, a small vision language model designed to run efficiently on edge devices, in a single binary executable using llamafile.
