@@ -3,10 +3,10 @@ DEPEND=systemd? (acct-group/llamafile acct-user/llamafile)
 DESCRIPTION=Run moondream2, a small vision language model designed to run efficiently on edge devices, in a single binary executable using llamafile.
 EAPI=8
 HOMEPAGE=https://huggingface.co/cjpais/moondream2-llamafile
-IUSE=systemd q5_k q5km-050824 q8-050824 q8 +full
+IUSE=systemd q5_k q5km_050824 q8_050824 q8 +full
 KEYWORDS=~amd64
 LICENSE=Apache 2.0
 RDEPEND=systemd? (acct-group/llamafile acct-user/llamafile)
 SLOT=0
-SRC_URI=amd64? ( q5_k? ( https://huggingface.co/cjpais/moondream2-llamafile/resolve/main/moondream2-q5_k.llamafile?download=true -> moondream2llamafile-bin-0.q5_k.amd64 ) q5km-050824? ( https://huggingface.co/cjpais/moondream2-llamafile/resolve/main/moondream2-q5km-050824.llamafile?download=true -> moondream2llamafile-bin-0.q5km-050824.amd64 ) q8-050824? ( https://huggingface.co/cjpais/moondream2-llamafile/resolve/main/moondream2-q8-050824.llamafile?download=true -> moondream2llamafile-bin-0.q8-050824.amd64 ) q8? ( https://huggingface.co/cjpais/moondream2-llamafile/resolve/main/moondream2-q8.llamafile?download=true -> moondream2llamafile-bin-0.q8.amd64 ) full? ( https://huggingface.co/cjpais/moondream2-llamafile/resolve/main/moondream2.llamafile?download=true -> moondream2llamafile-bin-0.amd64 ) )
-_md5_=4045f399d07eb982a3b52bd7b0409b7e
+SRC_URI=amd64? ( q5_k? ( https://huggingface.co/cjpais/moondream2-llamafile/resolve/main/moondream2-q5_k.llamafile?download=true -> moondream2llamafile-bin-0.q5_k.amd64 ) q5km_050824? ( https://huggingface.co/cjpais/moondream2-llamafile/resolve/main/moondream2-q5km-050824.llamafile?download=true -> moondream2llamafile-bin-0.q5km-050824.amd64 ) q8_050824? ( https://huggingface.co/cjpais/moondream2-llamafile/resolve/main/moondream2-q8-050824.llamafile?download=true -> moondream2llamafile-bin-0.q8-050824.amd64 ) q8? ( https://huggingface.co/cjpais/moondream2-llamafile/resolve/main/moondream2-q8.llamafile?download=true -> moondream2llamafile-bin-0.q8.amd64 ) full? ( https://huggingface.co/cjpais/moondream2-llamafile/resolve/main/moondream2.llamafile?download=true -> moondream2llamafile-bin-0.amd64 ) )
+_md5_=f5f403d1a1ba78aa87a1146748440e62
