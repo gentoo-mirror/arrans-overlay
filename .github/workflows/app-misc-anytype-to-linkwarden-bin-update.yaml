@@ -1,4 +1,4 @@
-# Generated using: https://github.com/arran4/arrans_overlay_workflow_builder dev Github Binary Release ./test.config 2024-09-16 15:37:53.070959999 +1000 AEST m=+0.002689582
+# Generated using: https://github.com/arran4/arrans_overlay_workflow_builder dev Github Binary Release ./test.config 2024-09-16 16:36:54.526505379 +1000 AEST m=+0.001946399
 
 name: app-misc/anytype-to-linkwarden-bin update
 
@@ -94,20 +94,20 @@ jobs:
                 echo 'LICENSE="MIT"'
                 echo 'SLOT="0"'
                 echo 'KEYWORDS="${{ env.keywords }}"'
-                echo 'IUSE=" anytype_to_linkwarden doc"'
-                echo 'REQUIRED_USE="anytype_to_linkwarden? ( || ( amd64  ) ) "'
+                echo 'IUSE=" doc"'
+                echo 'REQUIRED_USE=""'
                 echo 'DEPEND=""'
                 echo 'RDEPEND=""'
                 echo 'S="${WORKDIR}"'
                 echo ''
                 echo ''
                 echo 'SRC_URI="'
-                echo "  amd64? ( anytype_to_linkwarden? ( !anytype_to_linkwarden? (  https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/anytype-to-linkwarden_\${PV}_linux_amd64.tar.gz -> \${P}-anytype-to-linkwarden_\${PV}_linux_amd64.tar.gz  )  )  )  "
+                echo "  amd64? (  https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/anytype-to-linkwarden_\${PV}_linux_amd64.tar.gz -> \${P}-anytype-to-linkwarden_\${PV}_linux_amd64.tar.gz  )  "
                 echo "  arm64? (  https://github.com/${{ env.github_owner }}/${{ env.github_repo }}/releases/download/${tag}/anytype-to-linkwarden_\${PV}_linux_arm64.tar.gz -> \${P}-anytype-to-linkwarden_\${PV}_linux_arm64.tar.gz  )  "
                 echo '"'
                 echo ''
                 echo 'src_unpack() {'
-                echo '  if use amd64 && use anytype_to_linkwarden && ! use anytype_to_linkwarden ; then'
+                echo '  if use amd64; then'
                 echo "    unpack \"\${DISTDIR}/\${P}-anytype-to-linkwarden_\${PV}_linux_amd64.tar.gz\" || die \"Can't unpack archive file\""
                 echo '  fi'
                 echo '  if use arm64; then'
@@ -117,7 +117,7 @@ jobs:
                 echo ''
                 echo 'src_install() {'
                 echo '  exeinto /opt/bin'
-                echo '  if use amd64 && use anytype_to_linkwarden && ! use anytype_to_linkwarden ; then'
+                echo '  if use amd64; then'
                 echo '    newexe "${{ env.anytype-to-linkwarden_binary_archived_name_amd64 }}" "${{ env.anytype-to-linkwarden_binary_installed_name }}" || die "Failed to install Binary"'
                 echo '  fi'
                 echo '  if use arm64; then'
