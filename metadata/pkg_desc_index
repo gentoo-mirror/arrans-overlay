@@ -21,7 +21,7 @@ app-misc/dua-cli-bin 2.29.2: View disk space usage and delete unwanted data, fas
 app-misc/ente-auth-appimage 2.0.56_beta 3.0.17-r1 3.0.18_beta1-r1 3.0.18_beta2 3.1.1 3.1.2_beta 3.1.3: Ente's 2FA solution
 app-misc/flutter-google-datastore-appimage 0.1.5: Google Datastore and Datastore emulator client for easy modification of values
 app-misc/go-appimage-appimage 0.0.192 0.0.193 0.0.194 0.0.196 0.0.197 0.0.842: Go implementation of AppImage tools
-app-misc/jan-appimage 0.4.12 0.4.13 0.4.14 0.5.0 0.5.1 0.5.2 0.5.3: Jan is an open source alternative to ChatGPT that runs 100% offline on your computer. Multiple engine support (llama.cpp, TensorRT-LLM)
+app-misc/jan-appimage 0.4.12 0.4.13 0.4.14 0.5.0 0.5.1 0.5.2 0.5.3 0.5.4: Jan is an open source alternative to ChatGPT that runs 100% offline on your computer. Multiple engine support (llama.cpp, TensorRT-LLM)
 app-misc/lemmy-notify-appimage 0.0.4: Lemmy Notification app - for desktop atm
 app-misc/lemmy_notify-appimage 0.0.4-r1: Lemmy Notification app - for desktop atm
 app-misc/local-ai-appimage 0.6.6: 🎒 local.ai - Run AI locally on your PC!
