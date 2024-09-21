@@ -9,4 +9,4 @@ LICENSE=Apache 2.0
 RDEPEND=systemd? (acct-group/llamafile acct-user/llamafile)
 SLOT=0
 SRC_URI=amd64? ( q5_k? ( https://huggingface.co/cjpais/moondream2-llamafile/resolve/main/moondream2-q5_k.llamafile?download=true -> moondream2llamafile-bin-0.q5_k.amd64 ) q5km_050824? ( https://huggingface.co/cjpais/moondream2-llamafile/resolve/main/moondream2-q5km-050824.llamafile?download=true -> moondream2llamafile-bin-0.q5km-050824.amd64 ) q8_050824? ( https://huggingface.co/cjpais/moondream2-llamafile/resolve/main/moondream2-q8-050824.llamafile?download=true -> moondream2llamafile-bin-0.q8-050824.amd64 ) q8? ( https://huggingface.co/cjpais/moondream2-llamafile/resolve/main/moondream2-q8.llamafile?download=true -> moondream2llamafile-bin-0.q8.amd64 ) full? ( https://huggingface.co/cjpais/moondream2-llamafile/resolve/main/moondream2.llamafile?download=true -> moondream2llamafile-bin-0.amd64 ) )
-_md5_=f5f403d1a1ba78aa87a1146748440e62
+_md5_=529c2cca3a1b27398fdad05dfde4387f

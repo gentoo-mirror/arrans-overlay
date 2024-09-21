@@ -7,4 +7,4 @@ KEYWORDS=~amd64
 LICENSE=Apache 2.0
 SLOT=0
 SRC_URI=amd64? ( bf16? ( https://huggingface.co/Mozilla/llm-compiler-13b-ftd-llamafile/resolve/main/llm-compiler-13b-ftd.BF16.llamafile?download=true -> llm-compiler-13b-ftd-llamafile-bin-0.BF16.amd64 ) f16? ( https://huggingface.co/Mozilla/llm-compiler-13b-ftd-llamafile/resolve/main/llm-compiler-13b-ftd.F16.llamafile?download=true -> llm-compiler-13b-ftd-llamafile-bin-0.F16.amd64 ) q6_k? ( https://huggingface.co/Mozilla/llm-compiler-13b-ftd-llamafile/resolve/main/llm-compiler-13b-ftd.Q6_K.llamafile?download=true -> llm-compiler-13b-ftd-llamafile-bin-0.Q6_K.amd64 ) )
-_md5_=758b2309c5af1998c51c65ea3e240fa5
+_md5_=77eea6204f0c7d3251f0a0922f9e5afa
