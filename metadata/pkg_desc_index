@@ -14,7 +14,7 @@ app-admin/chezmoi-bin 2.52.3: Manage your dotfiles across multiple diverse machi
 app-admin/g2-bin 0.0.1 0.0.2: Arrans Gentoo specific tools
 app-dicts/lojban-dicts 2005: Lojban Text Dictionaries
 app-emulation/86box-roms 4.1.1 4.2 4.2.1: ROMs for the 86Box emulator.
-app-misc/anytype-to-linkwarden-bin 0.1.0 0.1.1: TODO
+app-misc/anytype-to-linkwarden-bin 0.1.1: TODO
 app-misc/appimagetool-appimage 0.0.162 0.0.164 0.0.167: AppImage tool to create AppImages (As an AppImage)
 app-misc/chatbox-appimage 0.10.0 1.3.10: User-friendly Desktop Client App for AI Models/LLMs (GPT, Claude, Gemini, Ollama...)
 app-misc/dua-cli-bin 2.29.2: View disk space usage and delete unwanted data, fast.
