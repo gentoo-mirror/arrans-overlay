@@ -5,18 +5,30 @@ on:
     branches: [ "main" ]
   schedule:
     - cron: "0 0 * * *"   # <=== Change this value
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/run-ebuild-tests.yml'
 
 jobs:
   tests:
     runs-on: ubuntu-latest
-    container: gentoo/stage3
+    container:
+      image: gentoo/stage3
+      volumes:
+        - ${{github.workspace}}:/var/db/repos/arrans-overlay
+      options: --user root
+    defaults:
+      run:
+        working-directory: /var/db/repos/arrans-overlay
     steps:
       # Check out the repository
       - uses: actions/checkout@master
 
       - name: Run tests
         run: |
-          for e in $(find . -type f -name \*.ebuild); do sudo ebuild "./$e" test; done
-
-
-          
+          emerge --sync
+          for e in $(find . -type f -name \*.ebuild); do
+            echo "Testing $e";
+            ebuild "./$e" test; 
+          done
