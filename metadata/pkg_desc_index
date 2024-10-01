@@ -9,7 +9,7 @@ app-accessibility/whisperfile-large-v3-bin 0-r1: Run whisper speach recognition 
 app-accessibility/whisperfile-medium-bin 0-r1: Run whisper speach recognition medium LLM in a single binary executable using llamafile.
 app-accessibility/whisperfile-small-bin 0-r1: Run whisper speach recognition small LLM in a single binary executable using llamafile.
 app-accessibility/whisperfile-tiny-bin 0-r1: Run whisper speach recognition tiny LLM in a single binary executable using llamafile.
-app-admin/arrans-overlay-workflow-builder-bin 0.1.7 0.1.10 0.1.12 0.1.13 0.1.14 0.1.16: TODO
+app-admin/arrans-overlay-workflow-builder-bin 0.1.7 0.1.10 0.1.12 0.1.13 0.1.14 0.1.16 0.1.17: TODO
 app-admin/chezmoi-bin 2.52.3: Manage your dotfiles across multiple diverse machines, securely.
 app-admin/g2-bin 0.0.1 0.0.2: Arrans Gentoo specific tools
 app-dicts/lojban-dicts 2005: Lojban Text Dictionaries
