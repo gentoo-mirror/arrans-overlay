@@ -34,6 +34,7 @@ app-misc/podcast-cdr-manager-bin 0.0.2: CLI tool to help manage podcast subscrip
 app-misc/stability-matrix-appimage 2.11.3 2.11.4 2.11.5 2.11.6 2.11.7 2.11.8 2.12.0 2.12.1: Multi-Platform Package Manager for Stable Diffusion
 app-misc/superfile-bin 1.1.4 1.1.5: Pretty fancy and modern terminal file manager
 app-misc/whisperfile-bin 0.1.1 0.1.2: Distribute and run whisper LLMs with a single file.
+app-text/anytype-ts-appimage 0.42.8 0.42.27_alpha 0.42.28_beta: Official Anytype client for MacOS, Linux, and Windows
 app-text/jbofihe 0.43: The de facto standard parser and glosser for Lojban.
 app-text/mostcomm-bin 1.2.0: A cli utility for finding the most common and sorting by length, lines-sets in a text file
 dev-go/goreleaser-bin 2.0.1 2.1.0 2.2.0 2.3.0 2.3.1 2.3.2: Deliver Go binaries as fast and easily as possible
