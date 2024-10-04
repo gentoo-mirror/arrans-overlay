@@ -21,9 +21,6 @@ src_unpack() {
   if use amd64; then
     unpack "${DISTDIR}/${P}-StabilityMatrix-linux-x64.zip" || die "Can't unpack archive file"
   fi
-  if use amd64; then
-    mv "StabilityMatrix.AppImage" "StabilityMatrix.AppImage"  || die "Can't move archived file"
-  fi
   chmod a+x "StabilityMatrix.AppImage"  || die "Can't chmod archive file"
   "./StabilityMatrix.AppImage" --appimage-extract "zone.lykos.stabilitymatrix.desktop" || die "Failed to extract .desktop from appimage"
   "./StabilityMatrix.AppImage" --appimage-extract "*.png" || die "Failed to extract root icons from app image"
