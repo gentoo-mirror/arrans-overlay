@@ -9,5 +9,5 @@ RDEPEND=sys-libs/glibc sys-libs/zlib
 RESTRICT=strip
 SLOT=0
 SRC_URI=amd64? ( https://github.com/ente-io/ente/releases/download/auth-v4.0.3-beta.3/ente-auth-v4.0.3-beta.3-x86_64.AppImage -> ente-auth-appimage-4.0.3_beta3-ente-auth-v4.0.3-beta.3-x86_64.AppImage )
-_eclasses_=xdg-utils	5465aed08f1dfc2a75f14cbea4272961
+_eclasses_=xdg-utils	42869b3c8d86a70ef3cf75165a395e09
 _md5_=f98f3529b37e4b9cabec92ca96ab6788
