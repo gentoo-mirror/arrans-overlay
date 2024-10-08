@@ -24,7 +24,7 @@ app-misc/go-appimage-appimage 0.0.192 0.0.193 0.0.194 0.0.196 0.0.197 0.0.842 0.
 app-misc/jan-appimage 0.4.12 0.4.13 0.4.14 0.5.0 0.5.1 0.5.2 0.5.3 0.5.4 0.5.5 0.5.6: Jan is an open source alternative to ChatGPT that runs 100% offline on your computer. Multiple engine support (llama.cpp, TensorRT-LLM)
 app-misc/lemmy-notify-appimage 0.0.4: Lemmy Notification app - for desktop atm
 app-misc/lemmy_notify-appimage 0.0.4-r1: Lemmy Notification app - for desktop atm
-app-misc/llamafile-bin 0.8.8 0.8.9 0.8.11 0.8.12 0.8.13: Distribute and run LLMs with a single file.
+app-misc/llamafile-bin 0.8.13: Distribute and run LLMs with a single file.
 app-misc/llm-compiler-13b-ftd-llamafile-bin 0-r1: LLM Compiler llm-compiler-13b-ftd is a large language model that's been trained to know how to read/write AT&T style assembly, LLVM IR, and C code. It's able to replicate the functionality of the clang compiler.
 app-misc/local-ai-appimage 0.6.6: 🎒 local.ai - Run AI locally on your PC!
 app-misc/maid-appimage 1.2.9 1.3.0 1.3.1: Maid is a cross-platform Flutter app for interfacing with GGUF / llama.cpp models locally, and with Ollama and OpenAI models remotely.
