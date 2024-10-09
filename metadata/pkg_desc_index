@@ -9,37 +9,36 @@ app-accessibility/whisperfile-large-v3-bin 0-r1: Run whisper speach recognition 
 app-accessibility/whisperfile-medium-bin 0-r1: Run whisper speach recognition medium LLM in a single binary executable using llamafile.
 app-accessibility/whisperfile-small-bin 0-r1: Run whisper speach recognition small LLM in a single binary executable using llamafile.
 app-accessibility/whisperfile-tiny-bin 0-r1: Run whisper speach recognition tiny LLM in a single binary executable using llamafile.
-app-admin/arrans-overlay-workflow-builder-bin 0.1.7 0.1.10 0.1.12 0.1.13 0.1.14 0.1.16 0.1.17: TODO
+app-admin/arrans-overlay-workflow-builder-bin 0.1.17: TODO
 app-admin/chezmoi-bin 2.52.3: Manage your dotfiles across multiple diverse machines, securely.
-app-admin/g2-bin 0.0.1 0.0.2: Arrans Gentoo specific tools
+app-admin/g2-bin 0.0.2: Arrans Gentoo specific tools
 app-dicts/lojban-dicts 2005: Lojban Text Dictionaries
-app-emulation/86box-roms 4.1.1 4.2 4.2.1: ROMs for the 86Box emulator.
+app-emulation/86box-roms 4.2 4.2.1: ROMs for the 86Box emulator.
 app-misc/anytype-to-linkwarden-bin 0.1.1: TODO
-app-misc/appimagetool-appimage 0.0.162 0.0.164 0.0.167: AppImage tool to create AppImages (As an AppImage)
-app-misc/chatbox-appimage 0.10.0 1.3.10: User-friendly Desktop Client App for AI Models/LLMs (GPT, Claude, Gemini, Ollama...)
+app-misc/appimagetool-appimage 0.0.167: AppImage tool to create AppImages (As an AppImage)
+app-misc/chatbox-appimage 1.3.10: User-friendly Desktop Client App for AI Models/LLMs (GPT, Claude, Gemini, Ollama...)
 app-misc/dua-cli-bin 2.29.2: View disk space usage and delete unwanted data, fast.
-app-misc/ente-auth-appimage 2.0.56_beta 3.0.17-r1 3.0.18_beta1-r1 3.0.18_beta2 3.1.1 3.1.2_beta 3.1.3 4.0.0 4.0.1 4.0.2 4.0.3_beta3 4.0.3_beta5: Ente's 2FA solution
+app-misc/ente-auth-appimage 4.0.2 4.0.3_beta5: Ente's 2FA solution
 app-misc/flutter-google-datastore-appimage 0.1.5: Google Datastore and Datastore emulator client for easy modification of values
-app-misc/go-appimage-appimage 0.0.192 0.0.193 0.0.194 0.0.196 0.0.197 0.0.842 0.0.851: Go implementation of AppImage tools
-app-misc/jan-appimage 0.4.12 0.4.13 0.4.14 0.5.0 0.5.1 0.5.2 0.5.3 0.5.4 0.5.5 0.5.6: Jan is an open source alternative to ChatGPT that runs 100% offline on your computer. Multiple engine support (llama.cpp, TensorRT-LLM)
-app-misc/lemmy-notify-appimage 0.0.4: Lemmy Notification app - for desktop atm
+app-misc/go-appimage-appimage 0.0.851: Go implementation of AppImage tools
+app-misc/jan-appimage 0.5.6: Jan is an open source alternative to ChatGPT that runs 100% offline on your computer. Multiple engine support (llama.cpp, TensorRT-LLM)
 app-misc/lemmy_notify-appimage 0.0.4-r1: Lemmy Notification app - for desktop atm
 app-misc/llamafile-bin 0.8.13: Distribute and run LLMs with a single file.
 app-misc/llm-compiler-13b-ftd-llamafile-bin 0-r1: LLM Compiler llm-compiler-13b-ftd is a large language model that's been trained to know how to read/write AT&T style assembly, LLVM IR, and C code. It's able to replicate the functionality of the clang compiler.
 app-misc/local-ai-appimage 0.6.6: 🎒 local.ai - Run AI locally on your PC!
-app-misc/maid-appimage 1.2.9 1.3.0 1.3.1: Maid is a cross-platform Flutter app for interfacing with GGUF / llama.cpp models locally, and with Ollama and OpenAI models remotely.
+app-misc/maid-appimage 1.3.1: Maid is a cross-platform Flutter app for interfacing with GGUF / llama.cpp models locally, and with Ollama and OpenAI models remotely.
 app-misc/moondream2llamafile-bin 0-r1: Run moondream2, a small vision language model designed to run efficiently on edge devices, in a single binary executable using llamafile.
-app-misc/ollama-bin 0.3.9 0.3.10 0.3.11 0.3.12: Get up and running with Llama 3, Mistral, Gemma, and other large language models.
+app-misc/ollama-bin 0.3.12: Get up and running with Llama 3, Mistral, Gemma, and other large language models.
 app-misc/podcast-cdr-manager-bin 0.0.2: CLI tool to help manage podcast subscriptions for burning to CDROMs / CDR / CDRW
 app-misc/stability-matrix-appimage 2.12.1: Multi-Platform Package Manager for Stable Diffusion
-app-misc/superfile-bin 1.1.4 1.1.5: Pretty fancy and modern terminal file manager
-app-misc/whisperfile-bin 0.1.1 0.1.2: Distribute and run whisper LLMs with a single file.
-app-text/anytype-ts-appimage 0.42.8 0.42.27_alpha 0.42.28_beta 0.42.29_beta 0.42.31_beta: Official Anytype client for MacOS, Linux, and Windows
+app-misc/superfile-bin 1.1.5: Pretty fancy and modern terminal file manager
+app-misc/whisperfile-bin 0.1.2: Distribute and run whisper LLMs with a single file.
+app-text/anytype-ts-appimage 0.42.8 0.42.27_alpha 0.42.31_beta: Official Anytype client for MacOS, Linux, and Windows
 app-text/jbofihe 0.43: The de facto standard parser and glosser for Lojban.
 app-text/mostcomm-bin 1.2.0: A cli utility for finding the most common and sorting by length, lines-sets in a text file
-dev-go/goreleaser-bin 2.0.1 2.1.0 2.2.0 2.3.0 2.3.1 2.3.2: Deliver Go binaries as fast and easily as possible
-dev-lang/dart-bin 3.4.4 3.5.0 3.5.1 3.5.2 3.5.3: The Dart SDK, including the VM, dart2js, core libraries, and more.
-dev-lang/flutter-bin 3.22.2 3.22.3 3.24.0 3.24.1 3.24.2 3.24.3: Flutter makes it easy and fast to build beautiful apps for mobile and beyond
+dev-go/goreleaser-bin 2.3.2: Deliver Go binaries as fast and easily as possible
+dev-lang/dart-bin 3.5.3: The Dart SDK, including the VM, dart2js, core libraries, and more.
+dev-lang/flutter-bin 3.24.3: Flutter makes it easy and fast to build beautiful apps for mobile and beyond
 dev-util/editorconfig-guesser-bin 1.0.0: Generates reasonable .editorconfig files for source files.
 dev-util/im-hex-appimage 1.35.4: 🔍 A Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM.
 dev-vcs/git-tag-inc-bin 1.1.3: Yet another semantic version incrementor and tagger for git
@@ -53,11 +52,11 @@ media-fonts/tt2020 0.2.1: TT2020 is an advanced, open source, hyperrealistic, mu
 media-fonts/victorian-modern-cursive-script 9999: Victorian Modern Cursive Script font - Handwriting Educational font
 media-fonts/virgil 9999: The font that powers Excalidraw
 media-video/vlc-xattrplaying_plugin 1.0.1: VLC plugin that adds 'seen' xattr tag to user.xdg.tags list when watching a video
-net-im/caprine-appimage 2.59.2 2.59.3 2.60.1: Elegant Facebook Messenger desktop app
-net-im/slackdump-bin 2.5.0_beta 2.5.8 2.5.9 2.5.10 2.5.11 2.5.12 2.5.14 2.5.15: Save or export your private and public Slack messages, threads, files, and users locally without admin privileges.
+net-im/caprine-appimage 2.60.1: Elegant Facebook Messenger desktop app
+net-im/slackdump-bin 2.5.15: Save or export your private and public Slack messages, threads, files, and users locally without admin privileges.
 net-misc/localsend-appimage 1.15.4: An open-source cross-platform alternative to AirDrop
 net-misc/pimtrace-bin 1.3.6: A CLI tool for preforming queries on ical and csv files
 net-misc/rustdesk-appimage 1.3.1: An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.
-www-apps/hugo-bin 0.127.0 0.128.0 0.128.1 0.128.2 0.129.0 0.130.0 0.131.0 0.132.0 0.132.1 0.132.2 0.133.0 0.133.1 0.134.0 0.134.1 0.134.2 0.134.3 0.135.0: The world’s fastest framework for building websites.
-www-apps/pagefind-bin 1.1.0 1.1.1: Static low-bandwidth search at scale
+www-apps/hugo-bin 0.135.0: The world’s fastest framework for building websites.
+www-apps/pagefind-bin 1.1.1: Static low-bandwidth search at scale
 www-misc/which_browser 0.1.4-r2: Which Browser? A browser selecting tool with rules to automate.
