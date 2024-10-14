@@ -24,7 +24,7 @@ app-misc/go-appimage-appimage 0.0.851: Go implementation of AppImage tools
 app-misc/jan-appimage 0.5.6: Jan is an open source alternative to ChatGPT that runs 100% offline on your computer. Multiple engine support (llama.cpp, TensorRT-LLM)
 app-misc/lemmy-notify-appimage 0.0.4: Lemmy Notification app - for desktop atm
 app-misc/lemmy_notify-appimage 0.0.4-r1: Lemmy Notification app - for desktop atm
-app-misc/llamafile-bin 0.8.13: Distribute and run LLMs with a single file.
+app-misc/llamafile-bin 0.8.13 0.8.14: Distribute and run LLMs with a single file.
 app-misc/llm-compiler-13b-ftd-llamafile-bin 0-r1: LLM Compiler llm-compiler-13b-ftd is a large language model that's been trained to know how to read/write AT&T style assembly, LLVM IR, and C code. It's able to replicate the functionality of the clang compiler.
 app-misc/local-ai-appimage 0.6.6: 🎒 local.ai - Run AI locally on your PC!
 app-misc/local-ai-bin 2.21.1 2.22.0: :robot: The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed inference
