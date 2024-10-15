@@ -35,6 +35,7 @@ app-misc/picocrypt-bin 1.43: A very small, very simple, yet very secure encrypti
 app-misc/podcast-cdr-manager-bin 0.0.2: CLI tool to help manage podcast subscriptions for burning to CDROMs / CDR / CDRW
 app-misc/stability-matrix-appimage 2.12.1 2.12.2: Multi-Platform Package Manager for Stable Diffusion
 app-misc/superfile-bin 1.1.5: Pretty fancy and modern terminal file manager
+app-misc/whisperfile-bin 0.1.2: Distribute and run whisper LLMs with a single file.
 app-text/anytype-ts-appimage 0.42.8 0.42.27_alpha 0.42.31_beta 0.42.32_beta 0.42.35_alpha 0.42.36_beta 0.42.37_alpha 0.42.38_beta: Official Anytype client for MacOS, Linux, and Windows
 app-text/jbofihe 0.43: The de facto standard parser and glosser for Lojban.
 app-text/mostcomm-bin 1.2.0: A cli utility for finding the most common and sorting by length, lines-sets in a text file
