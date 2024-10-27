@@ -11,7 +11,7 @@ app-accessibility/whisperfile-small-bin 0-r1: Run whisper speach recognition sma
 app-accessibility/whisperfile-tiny-bin 0-r1: Run whisper speach recognition tiny LLM in a single binary executable using llamafile.
 app-accessibility/whisperfile-turbo-bin 0-r1: Run whisper speach recognition turbo LLM in a single binary executable using llamafile.
 app-admin/arrans-overlay-workflow-builder-bin 0.1.17: TODO
-app-admin/chezmoi-bin 2.52.3 2.52.4: Manage your dotfiles across multiple diverse machines, securely.
+app-admin/chezmoi-bin 2.52.3 2.52.4 2.53.0: Manage your dotfiles across multiple diverse machines, securely.
 app-admin/g2-bin 0.0.2: Arrans Gentoo specific tools
 app-dicts/lojban-dicts 2005: Lojban Text Dictionaries
 app-emulation/86box-roms 4.2 4.2.1: ROMs for the 86Box emulator.
