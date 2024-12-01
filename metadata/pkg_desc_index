@@ -56,7 +56,7 @@ media-fonts/tt2020 0.2.1: TT2020 is an advanced, open source, hyperrealistic, mu
 media-fonts/victorian-modern-cursive-script 9999: Victorian Modern Cursive Script font - Handwriting Educational font
 media-fonts/virgil 9999: The font that powers Excalidraw
 media-video/vlc-xattrplaying_plugin 1.0.1: VLC plugin that adds 'seen' xattr tag to user.xdg.tags list when watching a video
-net-im/caprine-appimage 2.60.1: Elegant Facebook Messenger desktop app
+net-im/caprine-appimage 2.60.1 2.60.2: Elegant Facebook Messenger desktop app
 net-im/slackdump-bin 2.5.15 2.6.0 3.0.0_alpha: Save or export your private and public Slack messages, threads, files, and users locally without admin privileges.
 net-misc/localsend-appimage 1.15.4 1.16.0 1.16.1: An open-source cross-platform alternative to AirDrop
 net-misc/pimtrace-bin 1.3.6: A CLI tool for preforming queries on ical and csv files
