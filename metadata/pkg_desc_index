@@ -35,7 +35,7 @@ app-misc/mvcommon-bin 1.0.0 1.0.3 1.0.4: Tool for moving files into a folder whe
 app-misc/ollama-bin 0.3.12 0.3.13 0.3.14 0.4.0 0.4.1 0.4.2 0.4.3 0.4.4 0.4.5 0.4.6 0.4.7 0.5.1: Get up and running with Llama 3, Mistral, Gemma, and other large language models.
 app-misc/picocrypt-bin 1.43 1.44 1.45: A very small, very simple, yet very secure encryption tool.
 app-misc/podcast-cdr-manager-bin 0.0.2: CLI tool to help manage podcast subscriptions for burning to CDROMs / CDR / CDRW
-app-misc/rntocase-bin 0.0.2 0.0.4 0.1.0: Some utilities to rename files, to upper, lower, title, camel, kebab, darwin case and many more
+app-misc/rntocase-bin 0.0.2 0.0.4 0.1.0 0.1.1: Some utilities to rename files, to upper, lower, title, camel, kebab, darwin case and many more
 app-misc/stability-matrix-appimage 2.12.1 2.12.2 2.12.3 2.12.4: Multi-Platform Package Manager for Stable Diffusion
 app-misc/superfile-bin 1.1.5 1.1.6: Pretty fancy and modern terminal file manager
 app-misc/whisperfile-bin 0.1.2: Distribute and run whisper LLMs with a single file.
