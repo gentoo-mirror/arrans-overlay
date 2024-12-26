@@ -36,7 +36,7 @@ app-misc/ollama-bin 0.3.12 0.3.13 0.3.14 0.4.0 0.4.1 0.4.2 0.4.3 0.4.4 0.4.5 0.4
 app-misc/picocrypt-bin 1.43 1.44 1.45: A very small, very simple, yet very secure encryption tool.
 app-misc/podcast-cdr-manager-bin 0.0.2: CLI tool to help manage podcast subscriptions for burning to CDROMs / CDR / CDRW
 app-misc/rntocase-bin 0.0.2 0.0.4 0.1.0 0.1.1 0.1.2: Some utilities to rename files, to upper, lower, title, camel, kebab, darwin case and many more
-app-misc/stability-matrix-appimage 2.12.1 2.12.2 2.12.3 2.12.4: Multi-Platform Package Manager for Stable Diffusion
+app-misc/stability-matrix-appimage 2.12.1 2.12.2 2.12.3 2.12.4 2.13.0: Multi-Platform Package Manager for Stable Diffusion
 app-misc/superfile-bin 1.1.5 1.1.6: Pretty fancy and modern terminal file manager
 app-misc/whisperfile-bin 0.1.2: Distribute and run whisper LLMs with a single file.
 app-text/anytype-ts-appimage 0.42.8 0.42.38_beta 0.42.44_alpha 0.42.45_beta 0.42.46_beta 0.42.48_alpha 0.42.50_alpha 0.42.51_beta 0.43.1_alpha 0.43.1 0.43.2_alpha 0.43.2 0.43.4_alpha 0.43.4 0.43.6 0.43.7 0.43.8 0.43.9_alpha 0.43.11_alpha 0.43.12_alpha 0.43.14_alpha 0.43.15_alpha 0.43.17_alpha 0.43.19_alpha 0.43.20_alpha 0.43.21_beta 0.43.26_alpha 0.43.27_alpha 0.43.28_alpha 0.43.29_alpha 0.43.30_alpha 0.43.33_alpha 0.43.34_beta 0.43.35_alpha 0.43.38_beta 0.43.39_alpha 0.43.40_beta 0.44.0: Official Anytype client for MacOS, Linux, and Windows
