@@ -43,7 +43,7 @@ app-text/anytype-ts-appimage 0.42.8 0.42.38_beta 0.42.44_alpha 0.42.45_beta 0.42
 app-text/jbofihe 0.43: The de facto standard parser and glosser for Lojban.
 app-text/mostcomm-bin 1.2.0: A cli utility for finding the most common and sorting by length, lines-sets in a text file
 dev-go/goreleaser-bin 2.3.2 2.4.1 2.4.2 2.4.4 2.4.5 2.4.7 2.4.8 2.5.0 2.5.1: Deliver Go binaries as fast and easily as possible
-dev-lang/dart-bin 3.5.3 3.5.4 3.6.0: The Dart SDK, including the VM, dart2js, core libraries, and more.
+dev-lang/dart-bin 3.5.3 3.5.4 3.6.0 3.6.1: The Dart SDK, including the VM, dart2js, core libraries, and more.
 dev-lang/flutter-bin 3.24.3 3.24.4 3.24.5 3.27.0 3.27.1: Flutter makes it easy and fast to build beautiful apps for mobile and beyond
 dev-util/editorconfig-guesser-bin 1.0.0: Generates reasonable .editorconfig files for source files.
 dev-util/im-hex-appimage 1.35.4 1.36.0 1.36.2: 🔍 A Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM.
