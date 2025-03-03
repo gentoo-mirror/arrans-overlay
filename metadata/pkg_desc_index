@@ -16,7 +16,7 @@ app-admin/g2-bin 0.0.2: Arrans Gentoo specific tools
 app-dicts/lojban-dicts 2005: Lojban Text Dictionaries
 app-emulation/86box-roms 4.2 4.2.1: ROMs for the 86Box emulator.
 app-misc/anytype-to-linkwarden-bin 0.1.1: TODO
-app-misc/appimagetool-appimage 0.0.167 0.0.171: AppImage tool to create AppImages (As an AppImage)
+app-misc/appimagetool-appimage 0.0.2 0.0.167 0.0.171: AppImage tool to create AppImages (As an AppImage)
 app-misc/chatbox-appimage 0.10.0 0.10.1 0.10.2 0.10.3 0.10.4: User-friendly Desktop Client App for AI Models/LLMs (GPT, Claude, Gemini, Ollama...)
 app-misc/dua-cli-bin 2.29.2 2.29.4 2.30.0: View disk space usage and delete unwanted data, fast.
 app-misc/ente-auth-appimage 4.0.2 4.0.3_beta5 4.1.0 4.1.4 4.1.5 4.1.6 4.2.0 4.2.2 4.2.3 4.2.4 4.2.7 4.2.8 4.3.1 4.3.2: Ente's 2FA solution
