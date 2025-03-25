@@ -9,5 +9,5 @@ RDEPEND=|| ( dev-libs/libayatana-appindicator )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://arran4.sdf.org/which_browser/v0.1.10/which_browser-0.1.10+27-linux.deb
-_eclasses_=multiprocessing	1e32df7deee68372153dca65f4a7c21f	toolchain-funcs	6afdb6107430c1832ca7e16aacbf8fa1	multilib	b2a329026f2e404e9e371097dda47f96	unpacker	3b4ee72d1e2e0374fd8cd3eddfa00627
+_eclasses_=multiprocessing	1e32df7deee68372153dca65f4a7c21f	toolchain-funcs	6afdb6107430c1832ca7e16aacbf8fa1	multilib	b2a329026f2e404e9e371097dda47f96	unpacker	13d8d65b19f96f31b38c39b57419304e
 _md5_=4b009c80dd85303f6ee0b90182719433
