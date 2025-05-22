@@ -6,5 +6,5 @@ KEYWORDS=~amd64 ~arm64
 LICENSE=BSD
 RDEPEND=acct-group/ollama, acct-group/video
 SLOT=0
-_eclasses_=user-info	9951b1a0e4f026d16c33a001fd2d5cdf	acct-user	a4bf64e6c32b95705287346a2b678ae1
+_eclasses_=user-info	9951b1a0e4f026d16c33a001fd2d5cdf	acct-user	cf1210dd7bebfa79756df4fb6735d975
 _md5_=27d30b0caf6cd4abbfaa76d6227e5b07
