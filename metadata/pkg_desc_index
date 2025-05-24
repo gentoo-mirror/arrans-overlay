@@ -32,7 +32,7 @@ app-misc/local-ai-bin 2.21.1 2.22.0 2.22.1 2.23.0 2.24.0 2.24.1 2.24.2 2.25.0 2.
 app-misc/maid-appimage 1.2.9 1.3.0 1.3.1: Maid is a cross-platform Flutter app for interfacing with GGUF / llama.cpp models locally, and with Ollama and OpenAI models remotely.
 app-misc/moondream2llamafile-bin 0-r1: Run moondream2, a small vision language model designed to run efficiently on edge devices, in a single binary executable using llamafile.
 app-misc/mvcommon-bin 1.0.0 1.0.3 1.0.4: Tool for moving files into a folder where they have a common prefix
-app-misc/ollama-bin 0.5.7 0.5.8 0.5.9 0.5.11 0.5.12 0.5.13 0.6.0 0.6.1 0.6.2 0.6.3 0.6.4 0.6.5 0.6.6 0.6.7 0.6.8 0.7.0: Get up and running with Llama 3, Mistral, Gemma, and other large language models.
+app-misc/ollama-bin 0.5.7 0.5.8 0.5.9 0.5.11 0.5.12 0.5.13 0.6.0 0.6.1 0.6.2 0.6.3 0.6.4 0.6.5 0.6.6 0.6.7 0.6.8 0.7.0 0.7.1: Get up and running with Llama 3, Mistral, Gemma, and other large language models.
 app-misc/picocrypt-bin 1.43 1.44 1.45 1.46 1.47 1.48: A very small, very simple, yet very secure encryption tool.
 app-misc/podcast-cdr-manager-bin 0.0.2: CLI tool to help manage podcast subscriptions for burning to CDROMs / CDR / CDRW
 app-misc/rntocase-bin 0.0.2 0.0.4 0.1.0 0.1.1 0.1.2: Some utilities to rename files, to upper, lower, title, camel, kebab, darwin case and many more
