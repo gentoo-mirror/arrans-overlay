@@ -2,7 +2,7 @@ acct-group/llamafile 0-r1: System group: llamafile
 acct-group/ollama 0-r1: System group: ollama
 acct-group/whisperfile 0-r1: System group: whisperfile
 acct-user/llamafile 0-r1: System user for llamafile
-acct-user/ollama 0-r1 0-r2 0-r3: System user for ollama
+acct-user/ollama 0-r3: System user for ollama
 acct-user/whisperfile 0-r1: System user for whisperfile
 app-accessibility/whisperfile-base-bin 0-r1: Run whisper speach recognition base LLM in a single binary executable using llamafile.
 app-accessibility/whisperfile-large-v3-bin 0-r1: Run whisper speach recognition large-v3 LLM in a single binary executable using llamafile.
@@ -11,43 +11,43 @@ app-accessibility/whisperfile-small-bin 0-r1: Run whisper speach recognition sma
 app-accessibility/whisperfile-tiny-bin 0-r1: Run whisper speach recognition tiny LLM in a single binary executable using llamafile.
 app-accessibility/whisperfile-turbo-bin 0-r1: Run whisper speach recognition turbo LLM in a single binary executable using llamafile.
 app-admin/arrans-overlay-workflow-builder-bin 0.1.17: TODO
-app-admin/chezmoi-bin 2.52.3 2.52.4 2.53.0 2.53.1 2.54.0 2.55.0 2.56.0 2.57.0 2.58.0 2.59.0 2.59.1 2.60.0 2.60.1 2.61.0 2.62.0 2.62.1 2.62.2 2.62.3 2.62.4 2.62.5: Manage your dotfiles across multiple diverse machines, securely.
+app-admin/chezmoi-bin 2.62.5: Manage your dotfiles across multiple diverse machines, securely.
 app-admin/g2-bin 0.0.2: Arrans Gentoo specific tools
 app-dicts/lojban-dicts 2005: Lojban Text Dictionaries
-app-emulation/86box-roms 4.2 4.2.1: ROMs for the 86Box emulator.
+app-emulation/86box-roms 4.2.1: ROMs for the 86Box emulator.
 app-misc/anytype-to-linkwarden-bin 0.1.1: TODO
-app-misc/appimagetool-appimage 0.0.2 0.0.167 0.0.171: AppImage tool to create AppImages (As an AppImage)
-app-misc/chatbox-appimage 0.10.0 0.10.1 0.10.2 0.10.3 0.10.4: User-friendly Desktop Client App for AI Models/LLMs (GPT, Claude, Gemini, Ollama...)
-app-misc/dua-cli-bin 2.29.2 2.29.4 2.30.0 2.30.1: View disk space usage and delete unwanted data, fast.
-app-misc/ente-auth-appimage 4.0.2 4.0.3_beta5 4.1.0 4.1.4 4.1.5 4.1.6 4.2.0 4.2.2 4.2.3 4.2.4 4.2.7 4.2.8 4.3.1 4.3.2 4.3.5 4.3.6 4.4.0: Ente's 2FA solution
+app-misc/appimagetool-appimage 0.0.171: AppImage tool to create AppImages (As an AppImage)
+app-misc/chatbox-appimage 0.10.4: User-friendly Desktop Client App for AI Models/LLMs (GPT, Claude, Gemini, Ollama...)
+app-misc/dua-cli-bin 2.30.1: View disk space usage and delete unwanted data, fast.
+app-misc/ente-auth-appimage 4.4.0: Ente's 2FA solution
 app-misc/flutter-google-datastore-appimage 0.1.5: Google Datastore and Datastore emulator client for easy modification of values
-app-misc/go-appimage-appimage 0.0.851 0.0.855 0.0.860 0.0.866 0.0.869 0.0.886: Go implementation of AppImage tools
-app-misc/jan-appimage 0.5.6 0.5.7 0.5.8 0.5.9 0.5.10 0.5.11 0.5.12 0.5.13 0.5.14 0.5.15: Jan is an open source alternative to ChatGPT that runs 100% offline on your computer. Multiple engine support (llama.cpp, TensorRT-LLM)
+app-misc/go-appimage-appimage 0.0.886: Go implementation of AppImage tools
+app-misc/jan-appimage 0.5.15: Jan is an open source alternative to ChatGPT that runs 100% offline on your computer. Multiple engine support (llama.cpp, TensorRT-LLM)
 app-misc/lemmy-notify-appimage 0.0.4: Lemmy Notification app - for desktop atm
 app-misc/lemmy_notify-appimage 0.0.4-r1: Lemmy Notification app - for desktop atm
-app-misc/llamafile-bin 0.8.13 0.8.14 0.8.15 0.8.16 0.8.17 0.9.0 0.9.1 0.9.2 0.9.3: Distribute and run LLMs with a single file.
+app-misc/llamafile-bin 0.9.3: Distribute and run LLMs with a single file.
 app-misc/llm-compiler-13b-ftd-llamafile-bin 0-r1: LLM Compiler llm-compiler-13b-ftd is a large language model that's been trained to know how to read/write AT&T style assembly, LLVM IR, and C code. It's able to replicate the functionality of the clang compiler.
 app-misc/local-ai-appimage 0.6.6: 🎒 local.ai - Run AI locally on your PC!
-app-misc/local-ai-bin 2.21.1 2.22.0 2.22.1 2.23.0 2.24.0 2.24.1 2.24.2 2.25.0 2.26.0 2.27.0 2.28.0 2.29.0: :robot: The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed inference
-app-misc/maid-appimage 1.2.9 1.3.0 1.3.1: Maid is a cross-platform Flutter app for interfacing with GGUF / llama.cpp models locally, and with Ollama and OpenAI models remotely.
+app-misc/local-ai-bin 2.29.0: :robot: The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed inference
+app-misc/maid-appimage 1.3.1: Maid is a cross-platform Flutter app for interfacing with GGUF / llama.cpp models locally, and with Ollama and OpenAI models remotely.
 app-misc/moondream2llamafile-bin 0-r1: Run moondream2, a small vision language model designed to run efficiently on edge devices, in a single binary executable using llamafile.
-app-misc/mvcommon-bin 1.0.0 1.0.3 1.0.4: Tool for moving files into a folder where they have a common prefix
-app-misc/ollama-bin 0.5.7 0.5.8 0.5.9 0.5.11 0.5.12 0.5.13 0.6.0 0.6.1 0.6.2 0.6.3 0.6.4 0.6.5 0.6.6 0.6.7 0.6.8 0.7.0 0.7.1 0.8.0 0.9.0: Get up and running with Llama 3, Mistral, Gemma, and other large language models.
-app-misc/picocrypt-bin 1.43 1.44 1.45 1.46 1.47 1.48: A very small, very simple, yet very secure encryption tool.
+app-misc/mvcommon-bin 1.0.4: Tool for moving files into a folder where they have a common prefix
+app-misc/ollama-bin 0.9.0: Get up and running with Llama 3, Mistral, Gemma, and other large language models.
+app-misc/picocrypt-bin 1.48: A very small, very simple, yet very secure encryption tool.
 app-misc/podcast-cdr-manager-bin 0.0.2: CLI tool to help manage podcast subscriptions for burning to CDROMs / CDR / CDRW
-app-misc/rntocase-bin 0.0.2 0.0.4 0.1.0 0.1.1 0.1.2: Some utilities to rename files, to upper, lower, title, camel, kebab, darwin case and many more
-app-misc/stability-matrix-appimage 2.12.1 2.12.2 2.12.3 2.12.4 2.13.0 2.13.1 2.13.2 2.13.3 2.13.4 2.14.0 2.14.1 2.14.2: Multi-Platform Package Manager for Stable Diffusion
-app-misc/superfile-bin 1.1.5 1.1.6 1.1.7 1.2.1 1.3.0 1.3.1: Pretty fancy and modern terminal file manager
+app-misc/rntocase-bin 0.1.2: Some utilities to rename files, to upper, lower, title, camel, kebab, darwin case and many more
+app-misc/stability-matrix-appimage 2.14.2: Multi-Platform Package Manager for Stable Diffusion
+app-misc/superfile-bin 1.3.1: Pretty fancy and modern terminal file manager
 app-misc/whisperfile-bin 0.1.2: Distribute and run whisper LLMs with a single file.
-app-text/anytype-ts-appimage 0.42.8 0.42.38_beta 0.42.44_alpha 0.42.45_beta 0.42.46_beta 0.42.48_alpha 0.42.50_alpha 0.42.51_beta 0.43.1_alpha 0.43.1 0.43.2_alpha 0.43.2 0.43.4_alpha 0.43.4 0.43.6 0.43.7 0.43.8 0.43.9_alpha 0.43.11_alpha 0.43.12_alpha 0.43.14_alpha 0.43.15_alpha 0.43.17_alpha 0.43.19_alpha 0.43.20_alpha 0.43.21_beta 0.43.26_alpha 0.43.27_alpha 0.43.28_alpha 0.43.29_alpha 0.43.30_alpha 0.43.33_alpha 0.43.34_beta 0.43.35_alpha 0.43.38_beta 0.43.39_alpha 0.43.40_beta 0.44.0 0.44.2_alpha 0.44.4_alpha 0.44.6_alpha 0.44.7_alpha 0.44.8_alpha 0.44.9_alpha 0.44.10_alpha 0.44.11_alpha 0.44.12_alpha 0.44.13_beta 0.44.14_alpha 0.44.15_beta 0.44.16_alpha 0.44.17_alpha 0.44.18_alpha 0.44.19_alpha 0.44.20_beta 0.44.21_beta 0.44.23_beta 0.45.0 0.45.1_alpha 0.45.2_alpha 0.45.2 0.45.3_alpha 0.45.3 0.45.4_alpha 0.45.5_alpha 0.45.6_alpha 0.45.9_alpha 0.45.10_beta 0.45.11_alpha 0.45.12_beta 0.45.16_alpha 0.45.17_alpha 0.45.18_alpha 0.45.19_alpha 0.45.20_alpha 0.45.22_alpha 0.45.23_alpha 0.45.25_alpha 0.45.26_alpha 0.45.27_beta 0.45.31_alpha 0.45.32_beta 0.45.34_alpha 0.45.42_beta 0.45.43_alpha 0.45.46_alpha 0.45.47_beta 0.45.49_alpha 0.45.55_alpha 0.45.56_beta 0.46.0 0.46.1_alpha 0.46.1 0.46.2_alpha 0.46.2 0.46.3_alpha 0.46.4 0.46.5_alpha 0.46.5 0.46.6_alpha 0.46.6 0.46.7_alpha 0.46.8 0.46.9_alpha 0.46.11_alpha 0.46.12_alpha 0.46.14_alpha 0.46.16_alpha 0.46.17_alpha 0.46.19_alpha 0.46.20_alpha 0.46.21_beta 0.46.23_alpha 0.46.24_alpha 0.46.26_alpha 0.46.28_alpha 0.46.30_alpha 0.46.31_alpha 0.46.32_beta 0.46.33_alpha 0.46.35_alpha: Official Anytype client for MacOS, Linux, and Windows
+app-text/anytype-ts-appimage 0.46.35_alpha: Official Anytype client for MacOS, Linux, and Windows
 app-text/jbofihe 0.43: The de facto standard parser and glosser for Lojban.
 app-text/mostcomm-bin 1.2.0: A cli utility for finding the most common and sorting by length, lines-sets in a text file
-dev-go/goreleaser-bin 2.3.2 2.4.1 2.4.2 2.4.4 2.4.5 2.4.7 2.4.8 2.5.0 2.5.1 2.6.1 2.7.0 2.8.0 2.8.1 2.8.2 2.9.0: Deliver Go binaries as fast and easily as possible
+dev-go/goreleaser-bin 2.9.0: Deliver Go binaries as fast and easily as possible
 dev-java/corretto-bin 24.0.1.9.1: Prebuilt Java JDK binaries provided by Amazon Web Services
-dev-lang/dart-bin 3.5.3 3.5.4 3.6.0 3.6.1 3.6.2 3.7.0 3.7.1 3.7.2 3.7.3 3.8.0 3.8.1: The Dart SDK, including the VM, dart2js, core libraries, and more.
-dev-lang/flutter-bin 3.24.3 3.24.4 3.24.5 3.27.0 3.27.1 3.27.2 3.27.3 3.27.4 3.29.0 3.29.1 3.29.2 3.29.3 3.32.0 3.32.1: Flutter makes it easy and fast to build beautiful apps for mobile and beyond
+dev-lang/dart-bin 3.8.0 3.8.1: The Dart SDK, including the VM, dart2js, core libraries, and more.
+dev-lang/flutter-bin 3.32.1: Flutter makes it easy and fast to build beautiful apps for mobile and beyond
 dev-util/editorconfig-guesser-bin 1.0.0: Generates reasonable .editorconfig files for source files.
-dev-util/im-hex-appimage 1.35.4 1.36.0 1.36.2 1.37.0 1.37.1 1.37.2 1.37.3 1.37.4: 🔍 A Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM.
+dev-util/im-hex-appimage 1.37.4: 🔍 A Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM.
 dev-vcs/git-tag-inc-bin 1.1.3: Yet another semantic version incrementor and tagger for git
 kde-misc/arrans-kde-keyboard-shortcuts-with-meta 1.0.1: My keyboard bindings fast select.
 media-fonts/comic-mono-font 9999: A legible monospace font... the very typeface you’ve been trained to recognize since childhood.
@@ -59,12 +59,12 @@ media-fonts/tt2020 0.2.1: TT2020 is an advanced, open source, hyperrealistic, mu
 media-fonts/victorian-modern-cursive-script 9999: Victorian Modern Cursive Script font - Handwriting Educational font
 media-fonts/virgil 9999: The font that powers Excalidraw
 media-video/vlc-xattrplaying_plugin 1.0.1: VLC plugin that adds 'seen' xattr tag to user.xdg.tags list when watching a video
-net-im/caprine-appimage 2.60.1 2.60.2 2.60.3: Elegant Facebook Messenger desktop app
-net-im/slackdump-bin 2.5.15 2.6.0 2.6.1 3.0.0_alpha 3.0.0_beta 3.0.0 3.0.1 3.0.2 3.0.3 3.0.4 3.0.5 3.0.6 3.0.7 3.0.8 3.0.9 3.0.10 3.1.0 3.1.1 3.1.3: Save or export your private and public Slack messages, threads, files, and users locally without admin privileges.
-net-misc/localsend-appimage 1.15.4 1.16.0 1.16.1 1.17.0: An open-source cross-platform alternative to AirDrop
+net-im/caprine-appimage 2.60.3: Elegant Facebook Messenger desktop app
+net-im/slackdump-bin 3.1.3: Save or export your private and public Slack messages, threads, files, and users locally without admin privileges.
+net-misc/localsend-appimage 1.17.0: An open-source cross-platform alternative to AirDrop
 net-misc/pimtrace-bin 1.3.6: A CLI tool for preforming queries on ical and csv files
-net-misc/rustdesk-appimage 1.3.1 1.3.2 1.3.3 1.3.4 1.3.5 1.3.6 1.3.7 1.3.8 1.3.9 1.4.0: An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.
+net-misc/rustdesk-appimage 1.4.0: An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.
 net-print/pm-label-printer 1.2.1: CUPS driver for Phomemo PM-246S series and other compatible label printers
-www-apps/hugo-bin 0.135.0 0.136.0 0.136.1 0.136.2 0.136.3 0.136.4 0.136.5 0.137.0 0.137.1 0.138.0 0.139.0 0.139.2 0.139.3 0.139.4 0.140.0 0.140.1 0.140.2 0.141.0 0.142.0 0.143.0 0.143.1 0.144.0 0.144.1 0.144.2 0.145.0 0.146.1 0.146.2 0.146.3 0.146.4 0.146.5 0.146.6 0.146.7 0.147.0 0.147.1 0.147.2 0.147.3 0.147.4 0.147.5 0.147.6 0.147.7: The world’s fastest framework for building websites.
-www-apps/pagefind-bin 1.1.1 1.2.0 1.3.0: Static low-bandwidth search at scale
-www-misc/which_browser 0.1.4-r2 0.1.10: Which Browser? A browser selecting tool with rules to automate.
+www-apps/hugo-bin 0.147.7: The world’s fastest framework for building websites.
+www-apps/pagefind-bin 1.3.0: Static low-bandwidth search at scale
+www-misc/which_browser 0.1.10: Which Browser? A browser selecting tool with rules to automate.
