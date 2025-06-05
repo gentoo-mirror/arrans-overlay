@@ -16,7 +16,7 @@ app-admin/g2-bin 0.0.2: Arrans Gentoo specific tools
 app-dicts/lojban-dicts 2005: Lojban Text Dictionaries
 app-emulation/86box-roms 4.2.1: ROMs for the 86Box emulator.
 app-misc/anytype-to-linkwarden-bin 0.1.1: TODO
-app-misc/appimagetool-appimage 0.0.171: AppImage tool to create AppImages (As an AppImage)
+app-misc/appimagetool-appimage 0.0.2 0.0.171: AppImage tool to create AppImages (As an AppImage)
 app-misc/chatbox-appimage 0.10.4: User-friendly Desktop Client App for AI Models/LLMs (GPT, Claude, Gemini, Ollama...)
 app-misc/dua-cli-bin 2.30.1: View disk space usage and delete unwanted data, fast.
 app-misc/ente-auth-appimage 4.4.0: Ente's 2FA solution
@@ -45,7 +45,7 @@ app-text/mostcomm-bin 1.2.0: A cli utility for finding the most common and sorti
 dev-go/goreleaser-bin 2.9.0: Deliver Go binaries as fast and easily as possible
 dev-java/corretto-bin 24.0.1.9.1: Prebuilt Java JDK binaries provided by Amazon Web Services
 dev-lang/dart-bin 3.8.0 3.8.1: The Dart SDK, including the VM, dart2js, core libraries, and more.
-dev-lang/flutter-bin 3.32.1: Flutter makes it easy and fast to build beautiful apps for mobile and beyond
+dev-lang/flutter-bin 3.32.1 3.32.2: Flutter makes it easy and fast to build beautiful apps for mobile and beyond
 dev-util/editorconfig-guesser-bin 1.0.0: Generates reasonable .editorconfig files for source files.
 dev-util/im-hex-appimage 1.37.4: 🔍 A Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM.
 dev-vcs/git-tag-inc-bin 1.1.3: Yet another semantic version incrementor and tagger for git
