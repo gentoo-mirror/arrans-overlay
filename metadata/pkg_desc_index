@@ -62,7 +62,7 @@ media-fonts/victorian-modern-cursive-script 9999: Victorian Modern Cursive Scrip
 media-fonts/virgil 9999: The font that powers Excalidraw
 media-video/vlc-xattrplaying_plugin 1.0.1: VLC plugin that adds 'seen' xattr tag to user.xdg.tags list when watching a video
 net-im/caprine-appimage 2.60.3: Elegant Facebook Messenger desktop app
-net-im/slackdump-bin 3.1.3 3.1.4 3.1.5: Save or export your private and public Slack messages, threads, files, and users locally without admin privileges.
+net-im/slackdump-bin 3.1.3 3.1.4 3.1.5 3.1.6: Save or export your private and public Slack messages, threads, files, and users locally without admin privileges.
 net-misc/localsend-appimage 1.17.0: An open-source cross-platform alternative to AirDrop
 net-misc/pimtrace-bin 1.3.6: A CLI tool for preforming queries on ical and csv files
 net-misc/rustdesk-appimage 1.4.0: An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.
