@@ -22,7 +22,7 @@ app-misc/chatbox-appimage 0.10.4: User-friendly Desktop Client App for AI Models
 app-misc/dua-cli-bin 2.30.1: View disk space usage and delete unwanted data, fast.
 app-misc/ente-auth-appimage 4.4.0: Ente's 2FA solution
 app-misc/flutter-google-datastore-appimage 0.1.27: Google Datastore and Datastore emulator client for easy modification of values
-app-misc/fq-bin 0.15.0: jq for binary formats - tool, language and decoders for working with binary and text formats
+app-misc/fq-bin 0.15.0 0.15.1: jq for binary formats - tool, language and decoders for working with binary and text formats
 app-misc/go-appimage-appimage 0.0.886 0.0.891: Go implementation of AppImage tools
 app-misc/jan-appimage 0.5.15: Jan is an open source alternative to ChatGPT that runs 100% offline on your computer. Multiple engine support (llama.cpp, TensorRT-LLM)
 app-misc/lemmy-notify-appimage 0.0.4: Lemmy Notification app - for desktop atm
