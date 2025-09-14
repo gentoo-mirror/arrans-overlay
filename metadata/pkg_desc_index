@@ -15,7 +15,7 @@ app-admin/chezmoi-bin 2.62.5 2.62.6 2.62.7 2.63.0 2.63.1 2.64.0 2.65.0 2.65.1: M
 app-admin/ejson-bin 1.5.4: EJSON is a small library to manage encrypted secrets using asymmetric encryption.
 app-admin/g2-bin 0.0.2: Arrans Gentoo specific tools
 app-dicts/lojban-dicts 2005: Lojban Text Dictionaries
-app-emulation/86box-roms 4.2.1 5.0: ROMs for the 86Box emulator.
+app-emulation/86box-roms 4.2.1 5.0 5.1: ROMs for the 86Box emulator.
 app-misc/anytype-to-linkwarden-bin 0.1.1: TODO
 app-misc/appimagetool-appimage 0.0.3 0.0.171: AppImage tool to create AppImages (As an AppImage)
 app-misc/chatbox-appimage 0.10.4: User-friendly Desktop Client App for AI Models/LLMs (GPT, Claude, Gemini, Ollama...)
